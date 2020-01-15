@@ -1,0 +1,532 @@
+/* libre-franklin-300 - latin */
+@font-face {
+  font-family: 'Libre Franklin';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Libre Franklin Light"), local("LibreFranklin-Light"), url("../fonts/libre-franklin-v4-latin-300.woff2") format("woff2"), url("../fonts/libre-franklin-v4-latin-300.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* libre-franklin-regular - latin */
+@font-face {
+  font-family: 'Libre Franklin';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Libre Franklin"), local("LibreFranklin-Regular"), url("../fonts/libre-franklin-v4-latin-regular.woff2") format("woff2"), url("../fonts/libre-franklin-v4-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* libre-franklin-italic - latin */
+@font-face {
+  font-family: 'Libre Franklin';
+  font-style: italic;
+  font-weight: 400;
+  src: local("Libre Franklin Italic"), local("LibreFranklin-Italic"), url("../fonts/libre-franklin-v4-latin-italic.woff2") format("woff2"), url("../fonts/libre-franklin-v4-latin-italic.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* libre-franklin-600 - latin */
+@font-face {
+  font-family: 'Libre Franklin';
+  font-style: normal;
+  font-weight: 600;
+  src: local("Libre Franklin SemiBold"), local("LibreFranklin-SemiBold"), url("../fonts/libre-franklin-v4-latin-600.woff2") format("woff2"), url("../fonts/libre-franklin-v4-latin-600.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* libre-franklin-800 - latin */
+@font-face {
+  font-family: 'Libre Franklin';
+  font-style: normal;
+  font-weight: 800;
+  src: local("Libre Franklin ExtraBold"), local("LibreFranklin-ExtraBold"), url("../fonts/libre-franklin-v4-latin-800.woff2") format("woff2"), url("../fonts/libre-franklin-v4-latin-800.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+body {
+  font: 100% "Libre Franklin", sans-serif;
+  color: white;
+  font-size: 12px;
+}
+
+h1 {
+  font-size: 5em;
+  font-family: "Libre Franklin Light", sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/*padding and stuff*/
+.m-1 {
+  margin: 1em;
+}
+
+.m-2 {
+  margin: 2em;
+}
+
+/* Nav */
+input {
+  position: fixed;
+  opacity: 0;
+}
+
+label {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+label::before {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  content: '';
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+label .burger {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  z-index: 3;
+  width: 2em;
+  height: 2em;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+label .burger::before,
+label .burger .bar, label .burger::after {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 12%;
+  background: #fff;
+  content: '';
+  -webkit-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+label .burger .bar {
+  top: 44%;
+}
+
+label .burger::before {
+  top: 0;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+label .burger::after {
+  bottom: 0;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+input:focus + label .burger,
+label:hover .burger {
+  opacity: .75;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  /* material acceleration */
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  will-change: transform;
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: -webkit-transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+nav::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 32em;
+  background: #003c56;
+  content: '';
+  -webkit-transform: skewX(10deg) translateX(-100%);
+          transform: skewX(10deg) translateX(-100%);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  will-change: transform;
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: -webkit-transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@media (min-width: 40em) {
+  nav::before {
+    width: 35em;
+  }
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav a {
+  margin: .5em 0;
+  padding: .2em 2em;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: #c29d5f;
+  text-decoration: none;
+  font-weight: 500;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: color .15s, -webkit-transform .5s;
+  transition: color .15s, -webkit-transform .5s;
+  transition: color .15s, transform .5s;
+  transition: color .15s, transform .5s, -webkit-transform .5s;
+  -webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+          transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+nav a:nth-child(1) {
+  -webkit-transition-delay: 0.2s, 100ms;
+          transition-delay: 0.2s, 100ms;
+}
+
+nav a:nth-child(2) {
+  -webkit-transition-delay: 0.2s, 150ms;
+          transition-delay: 0.2s, 150ms;
+}
+
+nav a:nth-child(3) {
+  -webkit-transition-delay: 0.2s, 200ms;
+          transition-delay: 0.2s, 200ms;
+}
+
+nav a:nth-child(4) {
+  -webkit-transition-delay: 0.2s, 250ms;
+          transition-delay: 0.2s, 250ms;
+}
+
+nav a:nth-child(5) {
+  -webkit-transition-delay: 0.2s, 300ms;
+          transition-delay: 0.2s, 300ms;
+}
+
+nav a:nth-child(6) {
+  -webkit-transition-delay: 0.2s, 350ms;
+          transition-delay: 0.2s, 350ms;
+}
+
+nav a:hover, nav a:focus {
+  color: white;
+}
+
+nav .bottom .zampas-logo {
+  position: fixed;
+  bottom: 0;
+  margin: 1em;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: color .15s, -webkit-transform .5s;
+  transition: color .15s, -webkit-transform .5s;
+  transition: color .15s, transform .5s;
+  transition: color .15s, transform .5s, -webkit-transform .5s;
+  -webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+          transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+nav .bottom .zampas-logo:nth-child(1) {
+  -webkit-transition-delay: 0.3s, 100ms;
+          transition-delay: 0.3s, 100ms;
+}
+
+nav .bottom .zampas-logo:nth-child(2) {
+  -webkit-transition-delay: 0.3s, 150ms;
+          transition-delay: 0.3s, 150ms;
+}
+
+nav .bottom .zampas-logo:nth-child(3) {
+  -webkit-transition-delay: 0.3s, 200ms;
+          transition-delay: 0.3s, 200ms;
+}
+
+nav .bottom .zampas-logo:nth-child(4) {
+  -webkit-transition-delay: 0.3s, 250ms;
+          transition-delay: 0.3s, 250ms;
+}
+
+nav .bottom .zampas-logo:nth-child(5) {
+  -webkit-transition-delay: 0.3s, 300ms;
+          transition-delay: 0.3s, 300ms;
+}
+
+nav .bottom .zampas-logo:nth-child(6) {
+  -webkit-transition-delay: 0.3s, 350ms;
+          transition-delay: 0.3s, 350ms;
+}
+
+main {
+  overflow: hidden;
+}
+
+main .content {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  /* material acceleration */
+  will-change: transform, filter;
+  -webkit-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+[id="navcheck"]:checked + label::before {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+[id="navcheck"]:checked + label .burger::before, [id="navcheck"]:checked + label .burger::after {
+  width: 141.42%;
+}
+
+[id="navcheck"]:checked + label .burger::before {
+  -webkit-transform: rotate(45deg) translateY(-50%);
+          transform: rotate(45deg) translateY(-50%);
+}
+
+[id="navcheck"]:checked + label .burger::after {
+  -webkit-transform: rotate(-45deg) translateY(50%);
+          transform: rotate(-45deg) translateY(50%);
+}
+
+[id="navcheck"]:checked + label .burger .bar {
+  -webkit-transform: scale(0.1);
+          transform: scale(0.1);
+}
+
+[id="navcheck"]:checked ~ nav {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+[id="navcheck"]:checked ~ nav::before {
+  -webkit-transform: skewX(10deg) translateX(0);
+          transform: skewX(10deg) translateX(0);
+}
+
+[id="navcheck"]:checked ~ nav a, [id="navcheck"]:checked ~ nav .zampas-logo {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+[id="navcheck"]:checked ~ main .content {
+  -webkit-transform: translateX(3em);
+          transform: translateX(3em);
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+  -webkit-filter: grayscale(50%);
+  filter: grayscale(50%);
+  /* quite laggy :S */
+}
+
+/* helper */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* Centered texts in each section
+* --------------------------------------- */
+.section {
+  text-align: center;
+  overflow: hidden;
+}
+
+#myVideo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 88%;
+  background-size: 100% 100%;
+  background-color: black;
+  background-image: url(../img/zampas-grill.jpg);
+  background-position: center center;
+  background-size: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 3;
+}
+
+#section0 .layer {
+  position: absolute;
+  z-index: 4;
+  width: 100%;
+  left: 0;
+  top: 43%;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+#section0 {
+  overflow: hidden;
+}
+
+/* Swiper */
+.swiper-offer-box {
+  font-family: "Libre Franklin SemiBold", sans-serif;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 12%;
+  background: #333;
+}
+
+.swiper-offer-box .swiper-offers {
+  margin-top: 2em;
+}
+
+.swiper-offer-box .swiper-offers .swiper-wrapper {
+  text-align: left;
+  margin: 0 2em;
+}
+
+.swiper-offer-box .swiper-offers .swiper-wrapper img {
+  width: 120px;
+  vertical-align: middle;
+}
+
+.swiper-offer-box .swiper-offers .swiper-wrapper .title {
+  margin: 0 2em;
+  font-size: 1.6rem;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 80%;
+}
+
+.swiper-offer-box .swiper-offers .swiper-wrapper .subtitle {
+  font-size: 1.5rem;
+}
+
+.swiper-offer-box .swiper-offers .swiper-wrapper .text {
+  font-size: 1rem;
+}
+
+.swiper-offer-box .swiper-offers .swiper-wrapper button {
+  background-color: #c29d5f;
+  text-transform: uppercase;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/* Bottom menu
+* --------------------------------------- */
+#infoMenu li a {
+  color: #fff;
+}
+
+/* Hiding video controls
+* See: https://css-tricks.com/custom-controls-in-html5-video-full-screen/
+* --------------------------------------- */
+video::-webkit-media-controls {
+  display: none !important;
+}
+
+.primary-btn {
+  border: .1em solid #fff;
+  padding: .5em 1em;
+  text-transform: uppercase;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 1em 2em;
+  color: #fff;
+  cursor: pointer;
+}
+
+header {
+  position: fixed;
+  height: 50px;
+  display: block;
+  width: 100%;
+  z-index: 9;
+  color: #f2f2f2;
+  padding: 20px 0 0 0;
+}
+
+header #menus {
+  padding-left: 20px;
+  z-index: 10;
+}
+
+header .primary-btn {
+  position: absolute;
+  right: 1em;
+  margin-top: .6em;
+  top: 0;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  grid-row-gap: 3em;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  padding: 1em;
+}
+
+.grid-container .grid-item {
+  padding: 1em;
+  min-width: 50%;
+}
+/*# sourceMappingURL=custom.css.map */

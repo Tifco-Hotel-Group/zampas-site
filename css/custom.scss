@@ -1,0 +1,418 @@
+/* libre-franklin-300 - latin */
+@font-face {
+  font-family: 'Libre Franklin';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Libre Franklin Light'), local('LibreFranklin-Light'),
+       url('../fonts/libre-franklin-v4-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/libre-franklin-v4-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* libre-franklin-regular - latin */
+@font-face {
+  font-family: 'Libre Franklin';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Libre Franklin'), local('LibreFranklin-Regular'),
+       url('../fonts/libre-franklin-v4-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/libre-franklin-v4-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* libre-franklin-italic - latin */
+@font-face {
+  font-family: 'Libre Franklin';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Libre Franklin Italic'), local('LibreFranklin-Italic'),
+       url('../fonts/libre-franklin-v4-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/libre-franklin-v4-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* libre-franklin-600 - latin */
+@font-face {
+  font-family: 'Libre Franklin';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Libre Franklin SemiBold'), local('LibreFranklin-SemiBold'),
+       url('../fonts/libre-franklin-v4-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/libre-franklin-v4-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* libre-franklin-800 - latin */
+@font-face {
+  font-family: 'Libre Franklin';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Libre Franklin ExtraBold'), local('LibreFranklin-ExtraBold'),
+       url('../fonts/libre-franklin-v4-latin-800.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/libre-franklin-v4-latin-800.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+$font-main: 'Libre Franklin', sans-serif;
+$font-italic: 'Libre Franklin Italic', sans-serif;
+$font-light: 'Libre Franklin Light', sans-serif;
+$font-thick: 'Libre Franklin SemiBold', sans-serif;
+$font-heavy: 'Libre Franklin ExtraBold', sans-serif;
+
+$colors: (
+  primary:rgba(194, 157, 95, 1),
+  accent:rgba(0, 60, 86, 1),
+  accent2:rgba(0, 148, 181, 1)
+);
+
+$timing-function   : cubic-bezier(0.190, 1.000, 0.220, 1.000);
+$nav-width-desktop : 35em;
+$nav-width-mobile  : 32em;
+$nav-item-nb       : 6;
+
+body {
+  font: 100% $font-main;
+  color: white;
+  font-size: 12px;
+}
+h1{
+  font-size: 5em;
+  font-family: $font-light;
+  color: #fff;
+  margin:0;
+  padding:0;
+}
+
+/*padding and stuff*/
+.m-1 {
+	margin: 1em;;
+}
+.m-2 {
+	margin:2em;
+}
+
+/* Nav */
+input {
+	position: fixed;
+	opacity: 0;
+}
+label {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+	background: none;
+	cursor: pointer;
+	&::before {
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(darken(#333,80%),.6);
+		content: '';
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity .5s $timing-function;
+	}
+	.burger {
+		position: fixed;
+		top: 1em;
+		left: 1em;
+		z-index: 3;
+		width: 2em;
+		height: 2em;
+		margin: 0;
+		padding: 0;
+		transition: opacity .5s $timing-function;
+		&::before,
+		.bar,
+		&::after {
+			position: absolute;
+			left: 0;
+			display: block;
+			width: 100%;
+			height: 12%;
+			background: #fff;
+			content: '';
+			transition: all .5s $timing-function;
+		}
+		.bar {
+			top: 44%;
+		}
+		&::before {
+			top: 0;
+			transform-origin: top left;
+		}
+		&::after {
+			bottom: 0;
+			transform-origin: bottom left;
+		}
+	}
+}
+
+input:focus + label,
+label:hover {
+	.burger {
+		opacity: .75;
+	}
+}
+
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 2;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: flex-start;
+	transform: translate3d(0,0,0); /* material acceleration */
+	transform: translateX(-100%);
+	will-change: transform;
+	transition: transform .5s $timing-function;
+	&::before {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0; 
+		z-index: -1;
+		width: $nav-width-mobile;
+		background: #003c56;
+		content: '';
+		transform: skewX(10deg) translateX(-100%);
+		transform-origin: bottom left;
+		will-change: transform;
+		transition: transform .5s $timing-function;
+		@media(min-width: 40em) {
+			width: $nav-width-desktop;
+		}
+  }
+  ul {
+
+    li {
+      list-style: none;
+    }
+  }
+  
+	a {
+		margin: .5em 0;
+		padding: .2em 2em;
+		font-size: 1.5em;
+		text-transform: uppercase;
+		color: map-get($colors, primary);
+		text-decoration: none;
+		font-weight: 500;
+		transform: translateX(-100%);
+		transition: color .15s, transform .5s;
+		transition-timing-function: $timing-function;
+		@for $i from 1 through $nav-item-nb {
+			&:nth-child(#{$i}) { transition-delay: .2s, #{50 + (50 * $i)}ms; }	
+		}
+		&:hover, &:focus {
+			color: white;
+		}
+	}
+	.bottom {
+		// position: relative;
+		// transform: translateX(-100%);
+		// transition: color .15s, transform .5s;
+		.zampas-logo {
+			position: fixed;
+			bottom:0;
+			margin: 1em;
+			transform: translateX(-100%);
+			transition: color .15s, transform .5s;
+			transition-timing-function: $timing-function;
+			@for $i from 1 through $nav-item-nb {
+				&:nth-child(#{$i}) { transition-delay: .3s, #{50 + (50 * $i)}ms; }	
+			}
+		}
+		
+		
+	}
+}
+
+main {
+	overflow: hidden;
+	.content {
+		transform: translate3d(0,0,0); /* material acceleration */
+		will-change: transform, filter;
+		transition: all .5s $timing-function;
+	}
+}
+
+[id="navcheck"]:checked {
+	& + label {
+		&::before {
+			opacity: 1;
+			pointer-events: auto;
+		}
+		.burger {
+			&::before,
+			&::after {
+				width: 141.42%; // Pythagore!
+			}
+			&::before {
+				transform: rotate(45deg) translateY(-50%);
+			}
+			&::after {
+				transform: rotate(-45deg) translateY(50%);
+			}
+			.bar {
+				transform: scale(0.1);
+			}
+		}
+	}
+	& ~ nav {
+		transform: translateX(0);
+		&::before {
+			transform: skewX(10deg) translateX(0);
+		}
+		a, .zampas-logo {
+			transform: translateX(0);
+		}
+	}
+	& ~ main .content {
+		transform: translateX(3em);
+		transform-origin: left center;
+    -webkit-filter: grayscale(50%);
+    filter: grayscale(50%); /* quite laggy :S */
+	}
+}
+
+/* helper */
+.visuallyhidden { border:0; clip:rect(0 0 0 0);	height:1px; margin:-1px; overflow:hidden; padding:0; position:absolute; width:1px; }
+
+/* Centered texts in each section
+* --------------------------------------- */
+.section{
+  text-align:center;
+  overflow: hidden;
+}
+#myVideo {
+  position: absolute;
+		right: 0;
+		bottom: 0;
+		top:0;
+		right:0;
+		width: 100%;
+		height: 88%;
+		background-size: 100% 100%;
+ 		background-color: black; 
+  		background-image: url(../img/zampas-grill.jpg);
+  		background-position: center center;
+  		background-size: contain;
+   		object-fit: cover;
+   		z-index:3;
+}
+#section0 .layer{
+  position: absolute;
+  z-index: 4;
+  width: 100%;
+  left: 0;
+  top: 43%;
+  -webkit-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+#section0{
+  overflow: hidden;
+}
+/* Swiper */
+.swiper-offer-box {
+	font-family: $font-thick;
+	position: absolute;
+	bottom: 0;
+	left: 0;	
+	height: 12%;
+	background: #333;
+	.swiper-offers {
+		margin-top: 2em;
+	// margin:2em;
+		.swiper-wrapper {
+			text-align: left;
+			margin:0 2em;
+			img {
+				width: 120px;
+				vertical-align: middle;
+			}
+			.title {
+				margin:0 2em;
+				font-size: 1.6rem;
+				display: inline-block;
+				vertical-align: middle;
+				max-width: 80%;
+			}
+			.subtitle {
+				font-size: 1.5rem;
+			}
+			.text {
+				font-size: 1rem;
+			}
+			button {
+				background-color: map-get($colors, primary);
+				text-transform: uppercase;
+				border: none;
+				color: white;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 4px 2px;
+				cursor: pointer;				
+			}
+		}
+	}
+}
+/* Bottom menu
+* --------------------------------------- */
+#infoMenu li a {
+  color: #fff;
+}
+
+/* Hiding video controls
+* See: https://css-tricks.com/custom-controls-in-html5-video-full-screen/
+* --------------------------------------- */
+video::-webkit-media-controls {
+  display:none !important;
+}
+.primary-btn {
+  border:.1em solid #fff;
+  padding: .5em 1em;
+  text-transform: uppercase;
+}
+button {
+  background: none;
+  border: none;
+  padding: 1em 2em;
+  color: #fff;
+  cursor: pointer;
+}
+header {
+  position: fixed;
+  height: 50px;
+  display: block;
+  width: 100%;
+  z-index: 9;
+  color: #f2f2f2;
+  padding: 20px 0 0 0;
+
+  #menus {
+    padding-left:20px;
+    z-index: 10;
+  }
+  .primary-btn {
+	position: absolute;
+	right: 1em;
+	margin-top: .6em;
+	top:0;
+  }
+}
+.grid-container {
+	display: grid;
+	grid-row-gap: 3em;
+	grid-template-columns: auto auto;
+	padding: 1em;
+	.grid-item {
+		padding: 1em;
+		min-width: 50%;
+	  }
+  }
+  
+
+
+
