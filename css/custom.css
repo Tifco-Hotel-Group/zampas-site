@@ -552,8 +552,8 @@ Section 1
   margin: 0 auto;
   -webkit-animation-name: opacitymove;
           animation-name: opacitymove;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.6));
@@ -561,18 +561,18 @@ Section 1
 }
 
 #section0 .intro .scroll-arrows svg:nth-child(1) {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 
 #section0 .intro .scroll-arrows svg:nth-child(2) {
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
 }
 
 #section0 .intro .scroll-arrows svg:nth-child(3) {
-  -webkit-animation-delay: 1.8s;
-          animation-delay: 1.8s;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
 }
 
 .box-1 {
@@ -600,7 +600,13 @@ Section 2
 }
 
 .menucontainer .menuheading {
+  text-transform: uppercase;
   font-size: 2.8em;
+}
+
+.menucontainer .menusubheading {
+  text-transform: uppercase;
+  font-size: 2.2em;
 }
 
 .menucontainer .menutime {
@@ -616,12 +622,40 @@ Section 2
   font-size: 1.2em;
 }
 
+.menucontainer .allergenheading {
+  display: block;
+  font-size: 1.6em;
+  padding: 1em 1em 1em 0;
+}
+
+.menucontainer .allergen {
+  display: inline-block;
+  margin: .3em auto;
+  padding: 0.2em 1em;
+  font-size: .7em;
+}
+
 .menucontainer p {
   margin: 2em 0;
 }
 
 .menucontainer .pure-g {
   margin: 1em 5em auto;
+}
+
+.menucontainer .menudownload {
+  color: #c29d5f;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  padding: 1em 1em 1em 0;
+}
+
+.menucontainer .menudownload ::after {
+  background-image: url("../img/svg/right-arrow.svg");
+  content: " - Remember this";
+  background-color: yellow;
+  color: red;
+  font-weight: bold;
 }
 
 #myVideo {
@@ -688,7 +722,8 @@ button {
 }
 
 .menucontainer {
-  background: #c29d5f;
+  background: #fff;
+  color: #003c56;
 }
 
 header {

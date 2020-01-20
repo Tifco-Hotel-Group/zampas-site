@@ -464,13 +464,13 @@ Section 1
 			opacity: .4;
 			margin:0 auto;
 			animation-name: opacitymove;
-					animation-duration: 3s;			
+					animation-duration: 1.5s;			
 					animation-iteration-count: infinite;
 			-webkit-filter: drop-shadow( 5px 5px 5px rgba(0, 0, 0, .6));
 			filter: drop-shadow( 5px 5px 5px rgba(0, 0, 0, .6));
 			@for $i from 1 through $hp-svg-arrows {
 				&:nth-child(#{$i}) {
-					animation-delay: #{.6 * $i}s;					
+					animation-delay: #{.4 * $i}s;					
 				}
 			}
 		}		
@@ -498,8 +498,13 @@ Section 2
 .menucontainer {
 	text-align: left;
 	.menuheading {
+		text-transform: uppercase;
 		font-size: 2.8em;
-	}	
+	}
+	.menusubheading {
+		text-transform: uppercase;
+		font-size: 2.2em;
+	}
 	.menutime {
 		font-size: 2em;
 		margin:0 .5em;
@@ -510,11 +515,37 @@ Section 2
 	.foodtext {
 		font-size: 1.2em;
 	}
+	.allergenheading {
+		display: block;
+		font-size: 1.6em;
+		padding:1em 1em 1em 0;
+
+	}
+	.allergen {
+		display:inline-block;
+		margin: .3em auto;
+		padding: 0.2em 1em;
+		font-size: .7em;
+	}
 	p {
 		margin:2em 0
 	}
 	.pure-g {		
 	margin:1em 5em auto;
+	}
+	.menudownload {
+		color: map-get($colors, primary);
+		text-transform: uppercase;
+		font-size: 1.5em;
+		padding:1em 1em 1em 0;
+		::after {
+			background-image: url('../img/svg/right-arrow.svg');
+			content: " - Remember this";
+  background-color: yellow;
+  color: red;
+  font-weight: bold;
+			
+		}
 	}
 	.divider {
 
@@ -587,7 +618,8 @@ button {
 	cursor: pointer;
 }
 .menucontainer {
-	background: map-get($colors, primary );
+	background: #fff;
+	color: map-get($colors, accent);
 }
 
 header {
