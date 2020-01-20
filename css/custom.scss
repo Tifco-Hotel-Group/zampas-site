@@ -452,7 +452,9 @@ main {
 	50%  {opacity:1}
 	100%  {opacity:.4}
   }
-
+/* 
+Section 1
+*/
 #section0 {
 	background-image: url(../img/zampas-banner1.jpg);
 	.intro {
@@ -474,7 +476,12 @@ main {
 		}		
 	}
 }
-
+.box-1 {
+	padding:1em
+}
+/* 
+Section 2
+*/
 .menu-text {
 	h2 {
 		font-weight: 400;
@@ -488,6 +495,32 @@ main {
 		text-shadow: none;
 	}
 }
+.menucontainer {
+	text-align: left;
+	.menuheading {
+		font-size: 2.8em;
+	}	
+	.menutime {
+		font-size: 2em;
+		margin:0 .5em;
+	}
+	.foodtitle {
+		font-size: 1.6em;
+	}
+	.foodtext {
+		font-size: 1.2em;
+	}
+	p {
+		margin:2em 0
+	}
+	.pure-g {		
+	margin:1em 5em auto;
+	}
+	.divider {
+
+	}
+}
+
 
 #myVideo {
 	position: absolute;
@@ -553,6 +586,9 @@ button {
 	color: #fff;
 	cursor: pointer;
 }
+.menucontainer {
+	background: map-get($colors, primary );
+}
 
 header {
 	position: fixed;
@@ -596,13 +632,14 @@ header {
 
 .offer-box {
 	background-color: map-get($colors, accent);
-	margin: 9em 2em 2em 2em;
+	margin: 7.5em 2em 2em 2em;
 	padding: 3em;
 	vertical-align: middle;
 
 	.title {
+		font-weight: 400;
 		margin: 0 2em;
-		font-size: 1.8rem;
+		font-size: 2.5rem;
 		display: inline-block;
 		vertical-align: middle;
 		max-width: 80%;
