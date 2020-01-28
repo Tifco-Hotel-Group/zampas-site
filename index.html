@@ -247,7 +247,6 @@
                         <div class="pure-u-1-4">
                             <div class="box-m1">
                                 <span class=menusubheading>Continental Cold Buffet</span>
-
                                 <p>
                                     <span class=foodtitle>From the bakery</span>
                                     <span class=foodtext>
@@ -1005,10 +1004,11 @@
                                     <div class="owl-gallery-text">
                                         <span class="fig-header">Our Suppliers</span>
                                         <span class="fig-text">Our meat is Lorem ipsum dolor sit amet consectetur
-                                            adipisicing elit. Expedita, maxime autem dicta culpa quis consequuntur fugiat voluptate harum blanditiis.
+                                            adipisicing elit. Expedita, maxime autem dicta culpa quis consequuntur
+                                            fugiat voluptate harum blanditiis.
                                         </span>
                                     </div>
-                                    <div class="your-class">
+                                    <div class="our-suppliers">
                                         <div class="item"> <img src="img/Gallery/flipped 2.jpg" alt="Gold BG" class="">
                                         </div>
                                         <div class="item"><img src="img/Gallery/flipped 1.jpg" alt="Gold BG" class="">
@@ -1018,17 +1018,6 @@
                                         <div class="item"> <img src="img/Gallery/flipped 4.jpg" alt="Gold BG" class="">
                                         </div>
                                     </div>
-                                    <!-- <div class="owl-carousel owl-theme">
-                                        <div class="owl-gallery-container"></div>
-                                        <div class="item"> <img src="img/Gallery/flipped 2.jpg" alt="Gold BG" class="">
-                                        </div>
-                                        <div class="item"><img src="img/Gallery/flipped 1.jpg" alt="Gold BG" class="">
-                                        </div>
-                                        <div class="item"> <img src="img/Gallery/flipped 3.jpg" alt="Gold BG" class="">
-                                        </div>
-                                        <div class="item"> <img src="img/Gallery/flipped 4.jpg" alt="Gold BG" class="">
-                                        </div>                                        
-                                    </div>                                     -->
                                 </div>
                             </div>
                         </div>
@@ -1036,22 +1025,57 @@
                 </div>
             </div>
         </div>
-        <div class="section">
+        <div class="section" id="section3">
             <div class="pure-g">
-                <div class="pure-u-1-2" style="height: 500px;overflow: hidden;">
-                    <!-- Swiper -->
-                    <!-- <div class="owl-gallery-container">
-                        <div class="owl-carousel owl-theme">
-                            <div class="item"> <img src="img/Gallery/flipped 2.jpg" alt="Gold BG" class="pure-img">
-                            </div>
-                            <div class="item"><img src="img/Gallery/flipped 1.jpg" alt="Gold BG" class="pure-img">
-                            </div>
-                            <div class="item"> <img src="img/Gallery/flipped 3.jpg" alt="Gold BG" class="pure-img">
-                            </div>
-                            <div class="item"> <img src="img/Gallery/flipped 4.jpg" alt="Gold BG" class="pure-img">
+                <div class="pure-u-1">
+                    <div class="mt-5 offer-box">
+                        <div class="pure-g">
+                            <div class="pure-u-1">
+                                <div class="inside">
+                                    <span class="title">
+                                        Check Our Events
+                                    </span>
+                                </div>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="pure-g box-x2">
+                <div class="pure-u-1-2">
+                    <div class="box-1">
+                        <figure>
+                            <img src="img/BG-images/Toucan.png" alt="Gold BG" style="min-width: 450px;"
+                                class="centre-img pure-img">
+                        </figure>
+                    </div>
+                </div>
+                <div class="pure-u-1-2">
+                    <div class="box-1">
+                        <div class="events-slide">
+                            <div class="item">
+                                <h4>Valentines's Dining</h4>
+                                <span class="event-time">14 Feb 2020</span>
+                                <p class="event-p">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                    Exercitationem illum, delectus commodi repellendus sed doloribus nemo reprehenderit
+                                    magnam facere.</p>
+                            </div>
+                            <div class="item">
+                                <h4>Valentines's Dining</h4>
+                                <span class="event-time">14 Feb 2020</span>
+                                <p class="event-p">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                    Exercitationem illum, delectus commodi repellendus sed doloribus nemo reprehenderit
+                                    magnam facere.</p>
+                            </div>
+                            <div class="item">
+                                <h4>Valentines's Dining</h4>
+                                <span class="event-time">14 Feb 2020</span>
+                                <p class="event-p">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                    Exercitationem illum, delectus commodi repellendus sed doloribus nemo reprehenderit
+                                    magnam facere.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -1120,13 +1144,19 @@
                 $(".menucontainer").not("#idfour").removeClass("active");
                 $("#idfour").toggleClass("active");
             });
-            $('.your-class').slick({
+            $('.our-suppliers').slick({
                 dots: true,
                 infinite: true,
                 speed: 1500,
                 arrows: false,
                 autoplay: true,
                 autoplaySpeed: 2000
+            });
+            $('.events-slide').slick({
+                dots: false,
+                infinite: true,
+                speed: 1500,
+                arrows: true
             });
             // $('.owl-carousel').owlCarousel({
             //     loop: true,

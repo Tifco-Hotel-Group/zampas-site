@@ -943,18 +943,25 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.centre-img {
+  margin: 0 auto;
 }
 
 .inside {
   padding: 1em 0.5em;
-  text-align: center;
+  text-align: left;
   margin: auto;
 }
 
 .offer-box {
   background-color: #003c56;
-  margin: 5em 2em 2em 2em;
-  padding: 3em;
+  margin: 6em 2em 2em 2em;
+  padding: 2em;
   vertical-align: middle;
 }
 
@@ -1092,6 +1099,64 @@ figure {
   left: 25%;
   right: 25%;
   z-index: 5 !important;
+}
+
+#section3 figure {
+  margin-top: 8%;
+}
+
+#section3 .inside {
+  text-align: left;
+}
+
+#section3 .events-slide {
+  max-width: 1200px;
+}
+
+#section3 .events-slide .item {
+  text-align: left;
+}
+
+#section3 .events-slide .item h4 {
+  font-size: 3em;
+  padding: .8em 0;
+}
+
+#section3 .events-slide .item .event-time {
+  font-size: 1.8em;
+  text-transform: uppercase;
+  padding: .2em 0 .4em 0;
+  border-bottom: 1px solid #fff;
+}
+
+#section3 .events-slide .item .event-p {
+  font-size: 1.6em;
+}
+
+#section3 .events-slide .slick-prev {
+  left: 0;
+  top: 105%;
+}
+
+#section3 .events-slide .slick-prev::before {
+  font-size: 50px;
+}
+
+#section3 .events-slide .slick-prev:hover::before {
+  color: #b9862e;
+}
+
+#section3 .events-slide .slick-next {
+  left: 40px;
+  top: 105%;
+}
+
+#section3 .events-slide .slick-next::before {
+  font-size: 50px;
+}
+
+#section3 .events-slide .slick-next:hover::before {
+  color: #b9862e;
 }
 
 .image-w-caption {

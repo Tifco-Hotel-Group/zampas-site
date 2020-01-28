@@ -1013,18 +1013,22 @@ button {
 
 .pure-centre {
 	display: flex;
+    align-items: center;
+}
+.centre-img {
+	margin:0 auto;
 }
 
 .inside {
 	padding: 1em 0.5em;
-	text-align: center;
+	text-align: left;
 	margin: auto;
 }
 
 .offer-box {
 	background-color: map-get($colors, accentnavy);
-	margin: 5em 2em 2em 2em;
-	padding: 3em;
+	margin: 6em 2em 2em 2em;
+	padding: 2em;
 	vertical-align: middle;
 
 	.title {
@@ -1162,6 +1166,54 @@ figure {
 		right:25%;
 		z-index: 5 !important;
 	  }
+}
+
+#section3 {
+	figure {
+		margin-top: 8%;
+	}
+	.inside {
+		text-align: left;
+	}
+	.events-slide {
+		max-width: 1200px;
+		.item {
+			text-align: left;
+			h4 {
+				font-size: 3em;
+				padding:.8em 0;
+			}
+			.event-time {
+				font-size: 1.8em;
+				text-transform: uppercase;
+				padding: .2em 0 .4em 0;
+				border-bottom: 1px solid #fff;				
+			}
+			.event-p {
+				font-size: 1.6em;
+			}			
+		}
+		.slick-prev {
+			left: 0;
+			top: 105%;			
+			&::before {
+				font-size: 50px;
+			}
+			&:hover::before {
+				color: map-get($colors, primary);
+			}
+		}
+		.slick-next {
+			left: 40px;
+			top: 105%;
+			&::before {
+				font-size: 50px;
+			}
+			&:hover::before {
+				color: map-get($colors, primary);
+			}
+		}		
+	}
 }
 
 .image-w-caption {
