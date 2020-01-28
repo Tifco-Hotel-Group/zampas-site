@@ -773,16 +773,16 @@ Section 2
 		padding: .2em 1em;
 		cursor: pointer;
 
-		&::after {
-			background-image: url('../img/svg/down-arrow.svg');
-			content: ' ';
-			background-repeat: no-repeat;
-			margin: 0.4em .2em 0 .2em;
-			background-size: cover;
-			position: absolute;
-			width: 18px;
-			height: 18px;
-		}
+		// &::after {
+		// 	background-image: url('../img/svg/down-arrow.svg');
+		// 	content: ' ';
+		// 	background-repeat: no-repeat;
+		// 	margin: 0.4em .2em 0 .2em;
+		// 	background-size: cover;
+		// 	position: absolute;
+		// 	width: 18px;
+		// 	height: 18px;
+		// }
 
 		&:hover {
 			text-decoration: underline;
@@ -792,9 +792,9 @@ Section 2
 			text-decoration: underline;
 		}
 
-		&.active::after {
-			transform: rotate(180deg);
-		}
+		// &.active::after {
+		// 	transform: rotate(180deg);
+		// }
 	}
 
 }

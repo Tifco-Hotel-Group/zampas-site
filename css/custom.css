@@ -729,28 +729,12 @@ Section 2
   cursor: pointer;
 }
 
-.menu-options .menu-item::after {
-  background-image: url("../img/svg/down-arrow.svg");
-  content: ' ';
-  background-repeat: no-repeat;
-  margin: 0.4em .2em 0 .2em;
-  background-size: cover;
-  position: absolute;
-  width: 18px;
-  height: 18px;
-}
-
 .menu-options .menu-item:hover {
   text-decoration: underline;
 }
 
 .menu-options .menu-item.active {
   text-decoration: underline;
-}
-
-.menu-options .menu-item.active::after {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
 }
 
 .menu-text h2 {
