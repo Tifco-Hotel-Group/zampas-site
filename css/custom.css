@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* libre-franklin-300 - latin */
 @font-face {
   font-family: 'Libre Franklin';
@@ -55,40 +56,55 @@ h2,
 h3,
 h4,
 h5,
-.zampas-subheader {
+.subheader {
   font-family: "Libre Franklin", sans-serif;
   color: #fff;
-  font-weight: 600;
+  font-weight: 200;
   margin: 0;
   padding: 0;
   text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 4em;
   margin-bottom: 1em;
   text-transform: uppercase;
+  line-height: 3em;
 }
 
 h2 {
-  font-size: 3.6em;
+  font-size: 3.8em;
+  line-height: 2em;
 }
 
 h3 {
-  font-size: 2.5em;
+  font-size: 3em;
+  line-height: 1.8em;
 }
 
 h4 {
-  font-size: 1.9em;
+  font-size: 2.4em;
+  line-height: 1.6em;
 }
 
 h5 {
-  font-size: 1.3em;
+  font-size: 1.8em;
+  line-height: 1em;
 }
 
-.zampas-subheader {
-  font-size: 4.8em;
-  font-weight: 400;
+.subheader {
+  font-size: 2.4em;
+  text-transform: uppercase;
+  line-height: 1.8em;
+}
+
+p {
+  font-size: 1.6em;
+}
+
+a {
+  color: #b9862e;
+  font-size: 1.4em;
 }
 
 /*padding and stuff*/
@@ -117,7 +133,7 @@ h5 {
 }
 
 .mt-5 {
-  margin-top: 5em;
+  margin-top: 6em;
 }
 
 /* Nav */
@@ -142,18 +158,18 @@ header .primary-btn {
   top: 0;
 }
 
-input {
+header input {
   position: fixed;
   opacity: 0;
 }
 
 @media (min-width: 40em) {
-  input {
+  header input {
     display: none;
   }
 }
 
-label {
+header label {
   position: absolute;
   margin: 0;
   padding: 0;
@@ -163,7 +179,7 @@ label {
   cursor: pointer;
 }
 
-label::before {
+header label::before {
   position: fixed;
   z-index: 1;
   top: 0;
@@ -178,7 +194,7 @@ label::before {
   transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-label .burger {
+header label .burger {
   position: fixed;
   top: 2em;
   left: 2em;
@@ -191,8 +207,8 @@ label .burger {
   transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-label .burger::before,
-label .burger .bar, label .burger::after {
+header label .burger::before,
+header label .burger .bar, header label .burger::after {
   position: absolute;
   left: 0;
   display: block;
@@ -204,28 +220,28 @@ label .burger .bar, label .burger::after {
   transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-label .burger .bar {
+header label .burger .bar {
   top: 44%;
 }
 
-label .burger::before {
+header label .burger::before {
   top: 0;
   -webkit-transform-origin: top left;
           transform-origin: top left;
 }
 
-label .burger::after {
+header label .burger::after {
   bottom: 0;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
 }
 
-input:focus + label .burger,
-label:hover .burger {
+header input:focus + label .burger,
+header label:hover .burger {
   opacity: .75;
 }
 
-nav {
+header nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -256,7 +272,7 @@ nav {
   transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-nav::before {
+header nav::before {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -276,11 +292,11 @@ nav::before {
   transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-nav ul li {
+header nav ul li {
   list-style: none;
 }
 
-nav a {
+header nav a {
   margin: .5em 0;
   padding: .2em 2em;
   font-size: 1.5em;
@@ -298,48 +314,53 @@ nav a {
           transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-nav a:nth-child(1) {
+header nav a:nth-child(1) {
   -webkit-transition-delay: 0.2s, 100ms;
           transition-delay: 0.2s, 100ms;
 }
 
-nav a:nth-child(2) {
+header nav a:nth-child(2) {
   -webkit-transition-delay: 0.2s, 150ms;
           transition-delay: 0.2s, 150ms;
 }
 
-nav a:nth-child(3) {
+header nav a:nth-child(3) {
   -webkit-transition-delay: 0.2s, 200ms;
           transition-delay: 0.2s, 200ms;
 }
 
-nav a:nth-child(4) {
+header nav a:nth-child(4) {
   -webkit-transition-delay: 0.2s, 250ms;
           transition-delay: 0.2s, 250ms;
 }
 
-nav a:nth-child(5) {
+header nav a:nth-child(5) {
   -webkit-transition-delay: 0.2s, 300ms;
           transition-delay: 0.2s, 300ms;
 }
 
-nav a:nth-child(6) {
+header nav a:nth-child(6) {
   -webkit-transition-delay: 0.2s, 350ms;
           transition-delay: 0.2s, 350ms;
 }
 
-nav a:hover, nav a:focus {
+header nav a:nth-child(7) {
+  -webkit-transition-delay: 0.2s, 400ms;
+          transition-delay: 0.2s, 400ms;
+}
+
+header nav a:hover, header nav a:focus {
   color: white;
 }
 
-nav .zampas-logo-link {
+header nav .zampas-logo-link {
   display: block;
   width: 100%;
   position: absolute;
   bottom: 0;
 }
 
-nav .zampas-logo-link .zampas-logo {
+header nav .zampas-logo-link .zampas-logo {
   position: fixed;
   bottom: 0;
   margin: 1em;
@@ -353,34 +374,39 @@ nav .zampas-logo-link .zampas-logo {
           transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-nav .zampas-logo-link .zampas-logo:nth-child(1) {
+header nav .zampas-logo-link .zampas-logo:nth-child(1) {
   -webkit-transition-delay: 0.3s, 100ms;
           transition-delay: 0.3s, 100ms;
 }
 
-nav .zampas-logo-link .zampas-logo:nth-child(2) {
+header nav .zampas-logo-link .zampas-logo:nth-child(2) {
   -webkit-transition-delay: 0.3s, 150ms;
           transition-delay: 0.3s, 150ms;
 }
 
-nav .zampas-logo-link .zampas-logo:nth-child(3) {
+header nav .zampas-logo-link .zampas-logo:nth-child(3) {
   -webkit-transition-delay: 0.3s, 200ms;
           transition-delay: 0.3s, 200ms;
 }
 
-nav .zampas-logo-link .zampas-logo:nth-child(4) {
+header nav .zampas-logo-link .zampas-logo:nth-child(4) {
   -webkit-transition-delay: 0.3s, 250ms;
           transition-delay: 0.3s, 250ms;
 }
 
-nav .zampas-logo-link .zampas-logo:nth-child(5) {
+header nav .zampas-logo-link .zampas-logo:nth-child(5) {
   -webkit-transition-delay: 0.3s, 300ms;
           transition-delay: 0.3s, 300ms;
 }
 
-nav .zampas-logo-link .zampas-logo:nth-child(6) {
+header nav .zampas-logo-link .zampas-logo:nth-child(6) {
   -webkit-transition-delay: 0.3s, 350ms;
           transition-delay: 0.3s, 350ms;
+}
+
+header nav .zampas-logo-link .zampas-logo:nth-child(7) {
+  -webkit-transition-delay: 0.3s, 400ms;
+          transition-delay: 0.3s, 400ms;
 }
 
 .zampas-logo-desktop {
@@ -615,18 +641,20 @@ Section 1
 
 #section0 .intro {
   position: absolute;
-  left: 0;
-  margin: 10% 0 0 0;
+  left: 50%;
+  width: 500px;
+  margin-top: 10%;
+  margin-left: -250px;
   top: 0;
-  z-index: 100;
-  width: 100%;
-  height: 100%;
+  -webkit-transform: 2d 0, 0;
+          transform: 2d 0, 0;
+  z-index: 2;
   -webkit-filter: drop-shadow(2px 2px 2px rgba(44, 42, 42, 0.6));
   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.6));
 }
 
 #section0 .intro .zampas-logo {
-  max-width: 30%;
+  max-width: 500px;
 }
 
 #section0 .intro .special-btn {
@@ -651,19 +679,20 @@ Section 1
   }
 }
 
-#section0 .intro .scroll-arrows {
+#section0 .scroll-arrows {
   position: absolute;
-  bottom: 20%;
+  top: 100%;
   /* position the top  edge of the element at the middle of the parent */
   left: 50%;
   /* position the left edge of the element at the middle of the parent */
   -webkit-transform: translate(-50%, -104%);
           transform: translate(-50%, -104%);
+  z-index: 4;
   /* This is a shorthand of
-                                         translateX(-50%) and translateY(-50%) */
+									 translateX(-50%) and translateY(-50%) */
 }
 
-#section0 .intro .scroll-arrows svg {
+#section0 .scroll-arrows svg {
   display: block;
   opacity: .4;
   margin: 0 auto;
@@ -679,17 +708,17 @@ Section 1
   filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.6));
 }
 
-#section0 .intro .scroll-arrows svg:nth-child(1) {
+#section0 .scroll-arrows svg:nth-child(1) {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
 
-#section0 .intro .scroll-arrows svg:nth-child(2) {
+#section0 .scroll-arrows svg:nth-child(2) {
   -webkit-animation-delay: 0.8s;
           animation-delay: 0.8s;
 }
 
-#section0 .intro .scroll-arrows svg:nth-child(3) {
+#section0 .scroll-arrows svg:nth-child(3) {
   -webkit-animation-delay: 1.2s;
           animation-delay: 1.2s;
 }
@@ -712,6 +741,18 @@ Section 1
 
 .box-x2 {
   margin: 0 1.5em;
+}
+
+.box-x3 {
+  margin: 0 2.2em;
+}
+
+.box-x4 {
+  margin: 0 3em;
+}
+
+.box-x5 {
+  margin: 0 5em;
 }
 
 .boxtb-1 {
@@ -833,15 +874,24 @@ Section 2
   margin: 1em 5em auto;
 }
 
-.menucontainer .menudownload {
+.menucontainer .divider {
+  background-image: url("../img/svg/menu-divider.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 3em;
+  margin-top: 1em;
+}
+
+.standardlink {
   color: #b9862e;
   text-transform: uppercase;
   font-size: 1.5em;
-  padding: 1em 1em 1em 0;
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-position: below;
 }
 
-.menucontainer .menudownload::after {
+.standardlink::after {
   background-image: url("../img/svg/right-arrow.svg");
   content: ' ';
   background-repeat: no-repeat;
@@ -850,19 +900,18 @@ Section 2
   display: inline-block;
   width: 14px;
   height: 14px;
+  border-bottom: none;
 }
 
-.menucontainer .menudownload:hover, .menucontainer .menudownload:active {
+.smalllink {
+  color: #b9862e;
+  font-size: 1.2em;
   text-decoration: underline;
+  text-underline-position: below;
 }
 
-.menucontainer .divider {
-  background-image: url("../img/svg/menu-divider.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 3em;
-  margin-top: 1em;
+.smalllink::after {
+  content: '  ››';
 }
 
 #myVideo {
@@ -1102,7 +1151,7 @@ figure {
 }
 
 #section3 figure {
-  margin-top: 8%;
+  margin-top: 10%;
 }
 
 #section3 .inside {
@@ -1111,52 +1160,272 @@ figure {
 
 #section3 .events-slide {
   max-width: 1200px;
+  margin-top: 16%;
 }
 
 #section3 .events-slide .item {
   text-align: left;
+  padding: 2em;
+}
+
+#section3 .events-slide .item:focus {
+  outline: none;
 }
 
 #section3 .events-slide .item h4 {
   font-size: 3em;
+  font-weight: 200;
   padding: .8em 0;
 }
 
 #section3 .events-slide .item .event-time {
-  font-size: 1.8em;
+  font-size: 1.9em;
   text-transform: uppercase;
   padding: .2em 0 .4em 0;
-  border-bottom: 1px solid #fff;
+}
+
+#section3 .events-slide .item .event-time::after {
+  margin-top: 1.2em;
+  width: 3em;
+  display: block;
+  border-bottom: 2px solid #fff;
+  content: " ";
 }
 
 #section3 .events-slide .item .event-p {
-  font-size: 1.6em;
+  font-size: 1.7em;
+  width: 80%;
+  padding: 1em 0;
 }
 
-#section3 .events-slide .slick-prev {
-  left: 0;
-  top: 105%;
-}
-
-#section3 .events-slide .slick-prev::before {
-  font-size: 50px;
-}
-
-#section3 .events-slide .slick-prev:hover::before {
-  color: #b9862e;
-}
-
+#section3 .events-slide .slick-prev,
 #section3 .events-slide .slick-next {
-  left: 40px;
-  top: 105%;
+  width: 22px;
+  height: 50px;
+  top: 120%;
 }
 
+#section3 .events-slide .slick-prev::before,
 #section3 .events-slide .slick-next::before {
   font-size: 50px;
 }
 
+#section3 .events-slide .slick-prev:hover::before,
 #section3 .events-slide .slick-next:hover::before {
   color: #b9862e;
+}
+
+#section3 .events-slide .slick-prev {
+  left: -5px;
+}
+
+#section3 .events-slide .slick-next {
+  left: 60px;
+}
+
+#section4 .intro {
+  position: absolute;
+  left: 50%;
+  max-width: 600px;
+  margin-top: 20%;
+  margin-left: -300px;
+  top: 0;
+  z-index: 2;
+  height: 100%;
+  -webkit-filter: drop-shadow(2px 2px 2px rgba(44, 42, 42, 0.6));
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.6));
+}
+
+#section4 .intro h2 {
+  line-height: 1em;
+}
+
+#section4 .intro h2::after {
+  border-bottom: 2px solid #fff;
+  height: 1em;
+  display: block;
+  width: 2em;
+  content: ' ';
+  margin: 0 auto;
+  margin-bottom: .5em;
+}
+
+#section4 .intro p {
+  font-size: 1.8em;
+  line-height: 1.3em;
+}
+
+#section4 .our-bar {
+  max-height: 100vh;
+  background-color: white;
+}
+
+#section4 .our-bar img {
+  -webkit-filter: brightness(60%);
+  /* Safari 6.0 - 9.0 */
+  filter: brightness(60%);
+}
+
+#section4 .slick-prev,
+#section4 .slick-next {
+  width: 52px;
+  height: 160px;
+  top: 50%;
+  margin-top: 20px;
+  z-index: 99;
+  opacity: 1;
+}
+
+#section4 .slick-prev::before,
+#section4 .slick-next::before {
+  font-size: 160px;
+}
+
+#section4 .slick-prev:hover::before,
+#section4 .slick-next:hover::before {
+  color: #b9862e;
+}
+
+#section4 .slick-prev {
+  left: 360px;
+}
+
+#section4 .slick-next {
+  right: 470px;
+}
+
+.reviews-box {
+  text-align: left;
+}
+
+.reviews-box .review-title {
+  font-size: 3em;
+  line-height: 1.6em;
+  padding: .5em 0 .2em 0;
+  display: block;
+}
+
+.reviews-box .review-text {
+  font-size: 1.4em;
+  line-height: 1.8em;
+  display: inline-block;
+}
+
+.reviews-box .review-name {
+  font-size: 1.8em;
+  line-height: 2em;
+  padding: .5em 0;
+  display: block;
+}
+
+.gallery {
+  margin-left: 4em;
+}
+
+.gallery .item {
+  margin: 1em;
+}
+
+.gallery .slick-prev,
+.gallery .slick-next {
+  width: 22px;
+  height: 50px;
+  top: 110%;
+}
+
+.gallery .slick-prev::before,
+.gallery .slick-next::before {
+  font-size: 50px;
+}
+
+.gallery .slick-prev:hover::before,
+.gallery .slick-next:hover::before {
+  color: #b9862e;
+}
+
+.gallery .slick-prev {
+  left: -15px;
+}
+
+.gallery .slick-next {
+  left: 60px;
+}
+
+#section6 {
+  background-image: url("../img/BG-images/Leopard.png");
+  background-position: 80% 60%;
+  background-size: initial;
+  background-repeat: no-repeat;
+}
+
+#section6 .newsletter {
+  max-width: 50vw;
+  margin: 0 auto;
+  background-attachment: fixed;
+}
+
+#section6 .newsletter .pure-form {
+  margin: 2em auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+#section6 .newsletter .pure-form .pure-div-rounded {
+  display: block;
+  min-width: 210px;
+  background-color: white;
+  border-radius: 3em;
+  padding: 0 .3em 0 3em;
+  margin: 2em;
+}
+
+#section6 .newsletter .pure-form .pure-div-rounded .pure-input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: .5em 1em;
+  line-height: 2em;
+  font-size: 2em;
+  min-width: 400px;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #b9862e;
+}
+
+#section6 .newsletter .pure-form .pure-div-rounded .pure-button-primary {
+  border-radius: 2em;
+  background-color: #003c56;
+  line-height: 1.8em;
+  font-size: 2em;
+  min-width: 200px;
+}
+
+#section6 .newsletter .pure-form label {
+  font-size: 1.4em;
+}
+
+#section7 {
+  background-image: url("../img/zampas-banner2.jpg");
+}
+
+#section7 .pure-left {
+  text-align: left;
+}
+
+#section7 .footer h5 {
+  text-transform: uppercase;
+}
+
+#section7 .footer p {
+  font-size: 1.4em;
+  line-height: 1.1em;
+}
+
+#section7 .footer a {
+  color: white;
+  font-size: 1.4em;
+  line-height: 2em;
 }
 
 .image-w-caption {
