@@ -63,7 +63,7 @@ $colors: (primary:rgb(185, 134, 46),
 $timing-function : cubic-bezier(0.190, 1.000, 0.220, 1.000);
 $nav-width-desktop : 35em;
 $nav-width-mobile : 32em;
-$nav-item-nb : 7;
+$nav-item-nb : 8;
 $hp-svg-arrows : 3;
 
 body {
@@ -121,7 +121,7 @@ h5 {
 }
 
 p {
-	font-size: 1.6em;
+	font-size: 1.2em;
 }
 a {
 	color: map-get($colors, primary );
@@ -249,7 +249,14 @@ header {
 			&::after {
 				bottom: 0;
 				transform-origin: bottom left;
-			}
+			}		
+			&:hover {
+				&::before,
+				.bar,
+				&::after {
+				background: map-get($colors, primary );
+			}	
+		}
 		}
 
 		// @media(min-width: 40em) {
@@ -257,16 +264,6 @@ header {
 		// }
 	}
 
-	input:focus+label,
-	label:hover {
-		.burger {
-			opacity: .75;
-		}
-
-		// @media(min-width: 40em) {
-		// 	display: none;
-		// }
-	}
 
 	nav {
 		position: fixed;
@@ -794,7 +791,7 @@ Section 2
 .menu-options {
 	.menu-item {
 		display: inline-block;
-		font-size: 2.2em;
+		font-size: 2em;
 		color: map-get($colors, primary);
 		padding: .2em 1em;
 		cursor: pointer;
@@ -884,12 +881,12 @@ Section 2
 
 	.menuheading {
 		text-transform: uppercase;
-		font-size: 2em;
+		font-size: 1.8em;
 	}
 
 	.menusubheading {
 		text-transform: uppercase;
-		font-size: 1.6em;
+		font-size: 1.4em;
 	}
 
 	.menutime {
@@ -898,11 +895,12 @@ Section 2
 	}
 
 	.foodtitle {
-		font-size: 1.4em;
+		font-size: 1.2em;
 	}
 
 	.foodtext {
-		font-size: 1.1em;
+		font-size: 1em;
+		font-weight: 200;
 	}
 
 	.allergenheading {
@@ -920,7 +918,7 @@ Section 2
 	}
 
 	p {
-		margin: 2em 0
+		margin: 1em 0
 	}
 
 	.pure-g {
@@ -1066,9 +1064,9 @@ button {
 	vertical-align: middle;
 
 	.title {
-		font-weight: 400;
+		font-weight: 200;
 		margin: 0 2em;
-		font-size: 2.5rem;
+		font-size: 2.8em;
 		display: inline-block;
 		vertical-align: middle;
 		max-width: 80%;
@@ -1470,12 +1468,10 @@ figure {
 			text-transform: uppercase;
 		}
 		p {
-			font-size: 1.4em;
 			line-height: 1.1em;
 		}
 		a {
 			color: map-get($colors, accent );
-			font-size: 1.4em;
 			line-height:2em;
 		}
 	}

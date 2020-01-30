@@ -99,7 +99,7 @@ h5 {
 }
 
 p {
-  font-size: 1.6em;
+  font-size: 1.2em;
 }
 
 a {
@@ -236,9 +236,9 @@ header label .burger::after {
           transform-origin: bottom left;
 }
 
-header input:focus + label .burger,
-header label:hover .burger {
-  opacity: .75;
+header label .burger:hover::before,
+header label .burger:hover .bar, header label .burger:hover::after {
+  background: #b9862e;
 }
 
 header nav {
@@ -349,6 +349,11 @@ header nav a:nth-child(7) {
           transition-delay: 0.2s, 400ms;
 }
 
+header nav a:nth-child(8) {
+  -webkit-transition-delay: 0.2s, 450ms;
+          transition-delay: 0.2s, 450ms;
+}
+
 header nav a:hover, header nav a:focus {
   color: white;
 }
@@ -407,6 +412,11 @@ header nav .zampas-logo-link .zampas-logo:nth-child(6) {
 header nav .zampas-logo-link .zampas-logo:nth-child(7) {
   -webkit-transition-delay: 0.3s, 400ms;
           transition-delay: 0.3s, 400ms;
+}
+
+header nav .zampas-logo-link .zampas-logo:nth-child(8) {
+  -webkit-transition-delay: 0.3s, 450ms;
+          transition-delay: 0.3s, 450ms;
 }
 
 .zampas-logo-desktop {
@@ -784,7 +794,7 @@ Section 2
 */
 .menu-options .menu-item {
   display: inline-block;
-  font-size: 2.2em;
+  font-size: 2em;
   color: #b9862e;
   padding: .2em 1em;
   cursor: pointer;
@@ -852,12 +862,12 @@ Section 2
 
 .menucontainer .menuheading {
   text-transform: uppercase;
-  font-size: 2em;
+  font-size: 1.8em;
 }
 
 .menucontainer .menusubheading {
   text-transform: uppercase;
-  font-size: 1.6em;
+  font-size: 1.4em;
 }
 
 .menucontainer .menutime {
@@ -866,11 +876,12 @@ Section 2
 }
 
 .menucontainer .foodtitle {
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 
 .menucontainer .foodtext {
-  font-size: 1.1em;
+  font-size: 1em;
+  font-weight: 200;
 }
 
 .menucontainer .allergenheading {
@@ -887,7 +898,7 @@ Section 2
 }
 
 .menucontainer p {
-  margin: 2em 0;
+  margin: 1em 0;
 }
 
 .menucontainer .pure-g {
@@ -1035,9 +1046,9 @@ button {
 }
 
 .offer-box .title {
-  font-weight: 400;
+  font-weight: 200;
   margin: 0 2em;
-  font-size: 2.5rem;
+  font-size: 2.8em;
   display: inline-block;
   vertical-align: middle;
   max-width: 80%;
@@ -1438,13 +1449,11 @@ figure {
 }
 
 #section7 .footer p {
-  font-size: 1.4em;
   line-height: 1.1em;
 }
 
 #section7 .footer a {
   color: white;
-  font-size: 1.4em;
   line-height: 2em;
 }
 
