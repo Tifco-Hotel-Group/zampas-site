@@ -740,19 +740,39 @@ Section 1
 }
 
 .box-x2 {
-  margin: 0 1.5em;
+  margin: 0 2em;
 }
 
 .box-x3 {
-  margin: 0 2.2em;
+  margin: 0 3em;
 }
 
 .box-x4 {
-  margin: 0 3em;
+  margin: 0 4em;
 }
 
 .box-x5 {
   margin: 0 5em;
+}
+
+.box-x6 {
+  margin: 0 6em;
+}
+
+.box-x7 {
+  margin: 0 6em;
+}
+
+.box-x8 {
+  margin: 0 8em;
+}
+
+.box-x9 {
+  margin: 0 9em;
+}
+
+.box-x10 {
+  margin: 0 10em;
 }
 
 .boxtb-1 {
