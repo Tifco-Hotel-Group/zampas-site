@@ -156,6 +156,15 @@ a {
 .mt-5 {
 	margin-top: 6em;
 }
+.pure-left {
+	text-align: left;
+}
+.pure-right {
+	text-align: right;
+}
+.pure-white {
+	background-color: white;
+}
 
 /* Nav */
 header {
@@ -738,6 +747,17 @@ Section 1
 .box-1 {
 	padding: .6em
 }
+.box-2 {
+	padding: 1.2em
+}
+.box-3 {
+	padding: 1.8em
+}
+
+.box-4 {
+	padding: 2.4em
+}
+
 
 .box-m1 {
 	margin: .4em
@@ -1356,7 +1376,6 @@ figure {
 	.review-title {
 		font-size: 3em;
 		line-height: 1.6em;
-		padding: .5em 0 .2em 0;
 		display: block
 	}
 
@@ -1459,21 +1478,36 @@ figure {
 }
 
 #section7 {
-	background-image: url('../img/zampas-banner2.jpg');
-	.pure-left {
-		text-align: left;
-	}
+	background-image: url('../img/zampas-banner2.jpg');	
 	.footer {
-		h5 {
+		h3 {
 			text-transform: uppercase;
+			line-height: 1em;
 		}
 		p {
-			line-height: 1.1em;
+			line-height: 1em;
+			font-size: 1.4em;
 		}
 		a {
 			color: map-get($colors, accent );
-			line-height:2em;
+			line-height:1.8em;
 		}
+	}
+	#map {
+		width: 1000px;
+		height: 400px;
+	}
+}
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background-color: map-get($colors, accentnavy );
+	font-size: 1.4em;
+	.pure-img {
+		margin: 0 .5em;
+		max-width: 50px;
+		display: inline-block;
 	}
 }
 

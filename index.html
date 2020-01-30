@@ -1208,16 +1208,48 @@
                         <div class="footer">
                             <h3>Opening Hours</h3>
                             <p>View our opening hours below, lorem ipsum dolor sit amet consequat portitor</p>
-                                <p>18 exchange Street Upper</p>
-                                <p>Temple Bar</p>
-                                <p>Dublin</p>
-                                <p>D08 AV24</p>
-                                <a href="tel:014855000">+353 1 482 5000</a><br />
-                                <a href="mailto:zampas@hrhdublin.com">zampas@hrhdublin.com</a>
+                                <p><strong>Monday to Wednesday:</strong> 10am - 9pm</p>
+                                <p><strong>Thursday to Friday:</strong> 10am - 11pm</p>
+                                <p><strong>Saturday:</strong> 12pm - 9pm</p>
+                                <p><strong>Sunday:</strong> 12pm - 7pm</p>                                
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="box-x10">
+                <div class="pure-g box-4 pure-white mt-2">
+                    <div class="pure-u-1 box-2">
+                        <div class="pure-g">
+                        <div id="map" class="pure-u-2-3">
+
+                        </div>
+                        <div class="pure-u-1-3">
+                            <script type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=108955&type=standard&theme=standard&iframe=true&domain=com&lang=en-US&newtab=true&ot_source=Restaurant%20website'></script>
+                        </div>
+                    </div>                     
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="box-x10">
+                    <div class="pure-g ">
+                        <div class="pure-u-1-2 pure-left">
+                            <div class="box-x2 box-3">
+                            Terms / Privacy Policy / Data Access Request
+                            </div>
+                        </div>
+                        <div class="pure-u-1-2 pure-right">
+                            <div class="box-x2 box-3">
+                                <img src="img/svg/Facebook.svg" alt="Facbook" class="pure-img">
+                                <img src="img/svg/Twitter.svg" alt="Twitter" class="pure-img">
+                                <img src="img/svg/Instagram.svg" alt="Instagram" class="pure-img">
+                                <img src="img/svg/Youtube.svg" alt="Youtube" class="pure-img">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
 
 
@@ -1318,154 +1350,46 @@
                 speed: 500,
                 arrows: true
             });
-            // $('.owl-carousel').owlCarousel({
-            //     loop: true,
-
-            //     margin: 10,
-            //     items: 1,
-            //     lazyLoad: true
-            // })
-
-            // $(".closebtn").click(function(){
-            //     $(this).parent().removeClass("active");
-            //     $(".menu-item").removeClass("active");
-            // });
-
         });
     </script>
-    <!-- <script>
-        new fullpage('#fullpage', {
-            //options here
-            autoScrolling: true,
-            // fadingEffect:true,
-            lockAnchors: false,
-            anchors: ['ZampasDublin', 'Menus', 'OurBar', 'ReviewsAndGallery', 'OpeningHours'],
-            fitToSection: true,
-            lazyLoading: true,
-            controlArrows: false,
-            // afterRender: function () {
-            //     setInterval(function () {
-            //         $.fn.fullpage.moveSlideRight();
-            //         }, 1000);
-            // },
-            // scrollBar: true,
-            // navigation: true,
-            // navigationPosition: 'right',
-            navigationTooltips: ['Zampas Dublin', 'Menus', 'Our Bar', 'Reviews and Gallery', 'Opening Hours']
-        });
-        //methods
-        fullpage_api.setAllowScrolling(true);
-    </script> -->
-    <!-- <script>
-        var swiper = new Swiper('.swiper-offers', {
-            loop: true,
-            lazy: true,
-            autoplay: {
-                delay: 5000,
-            },
-        });
-        var swiper = new Swiper('.grid1-swiper-container', {
-            spaceBetween: 30,
-            slidesPerView: 1,
-            lazy: true,
-            pagination: {
-                el: '.swiper-pagination',
-                dynamicBullets: true,
-                clickable: true,
-            },
-        });
-    </script> -->
-    <!-- <script>
-        // var selectitem = document.getElementsByClassName("select");
+           
+    <script type="text/javascript">
+        // When the window has finished loading create our google map below
+        google.maps.event.addDomListener(window, 'load', init);
+    
+        function initMap() {
+            // Basic options for a simple Google Map
+            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+            var mapOptions = {
+                // How zoomed in you want the map to start at (always required)
+                zoom: 16,
 
-        // function onchange(selectitem) {
-        //     var b = this.val();
-        //     window.location = b
-        // }
-        // // $("select").change(function () {
-        // //     var b = $(this).val();
-        // //     window.location = b
-        // // });
+                // The latitude and longitude to center the map (always required)
+                center: new google.maps.LatLng(53.344055, -6.267890), // New York
 
-        // function HideContent(b) {
-        //     document.getElementById(b).style.display = "none"
-        // }
+                // How you would like to style the map. 
+                // This is where you would paste any style found on Snazzy Maps.
+                styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]
+            };
 
-        // function ShowContent(b) {
-        //     document.getElementById(b).style.display = "block"
-        // }
+            // Get the HTML DOM element that will contain your map 
+            // We are using a div with id="map" seen below in the <body>
+            var mapElement = document.getElementById('map');
 
-        // function ReverseDisplay(b) {
-        //     if (document.getElementById(b).style.display == "none") {
-        //         document.getElementById(b).style.display = "block"
-        //     } else {
-        //         document.getElementById(b).style.display = "none"
-        //     }
-        // }
+            // Create the Google Map using our element and options defined above
+            var map = new google.maps.Map(mapElement, mapOptions);
 
-        // function HideAllShowOne(g) {
-        //     var h = "idone idtwo idthree";
-        //     h = h.replace(/[,\s"']/g, " ");
-        //     h = h.replace(/^\s*/, "");
-        //     h = h.replace(/\s*$/, "");
-        //     h = h.replace(/  +/g, " ");
-        //     var f = h.split(" ");
-        //     for (var d = 0; d < f.length; d++) {
-        //         HideContent(f[d])
-        //     }
-        //     ShowContent(g)
-        // }
-        // function openTab(tabName) {
-        //     var content = document.getElementById(tabName);
-        //     var i, x;
-        //     x = document.getElementsByClassName("menucontainer");
-        //     for (i = 0; i < x.length; i++) {
-        //         x[i].style.maxHeight = null;
-        //     }
-        //     content.style.maxHeight = content.scrollHeight + "px";
-        // }
-
-
-
-        // var coll = document.getElementsByClassName("menu-item");
-        // var g, y;
-
-
-
-
-        // for (g = 0; g < coll.length; g++) {
-        //     coll[g].addEventListener("click", function () {
-        //         for (y = 0; y < coll.length; y++) {
-        //             coll[y].classList.remove("active");
-        //         }
-
-
-        //         // coll[g].classList.remove("active");
-        //         // coll[g].classList.remove("active");
-
-        //         this.classList.add("active");
-        //         // if (this.classList.contains("active")) {
-        //         //     coll.classList = ("active")
-        //         // }
-
-        //     });
-        // }
-
-        //     for (i = 0; i < coll.length; i++) {
-        //     coll[i].addEventListener("click", function () {                
-        //         this.classList.toggle("active");
-        //         if (content.style.maxHeight) {
-        //             content.style.maxHeight = null;
-        //         } else {
-        //             content.style.maxHeight = content.scrollHeight + "px";
-        //         }
-        //     });
-        // }
-
-        // content.style.maxHeight = content.scrollHeight + "px";
-        // document.getElementById(tabName).style.maxHeight = "200px";
-        // }
-    </script> -->
+            // Let's also add a marker while we're at it
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(53.344055, -6.267890),
+                map: map,
+                title: 'Snazzy!'
+            });
+        }
+    </script>
+     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBd08xfUK4qFbNA42UlhLRxqgleOo7sZ8E&callback=initMap">
+     </script>
+    
 </body>
 
 </html>
