@@ -36,9 +36,9 @@
         <nav id="menu">
             <a href="#ZampasDublin" class="nav-click">Home</a>
             <a href="#Menus" class="nav-click">Menus</a>
-            <a href="#About" class="nav-click">About Us</a>
-            <a href="#Events" class="nav-click">Events</a>
+            <a href="#About" class="nav-click">About Us</a>            
             <a href="#ZampasBar" class="nav-click">Zampas Bar</a>
+            <a href="#Events" class="nav-click">Events</a>
             <a href="#ReviewsAndGallery" class="nav-click">Gallery</a>
             <a href="#Newsletter" class="nav-click">Newsletter</a>
             <a href="#OpeningHours" class="nav-click">Opening Hours</a>
@@ -969,8 +969,25 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>        
         <div class="section" id="section3">
+            <div class="intro">
+                <h2>
+                    Zampas Bar
+                </h2>
+                <span class="subheader">
+                    Lorem, ipsum
+                </span>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A enim harum maiores quasi placeat sunt
+                    voluptate vel quas minus, quam maxime deserunt blanditiis asperiores aliquam, deleniti magni
+                    dignissimos dolores adipisci!</p>
+            </div>
+            <div class="slide"><img src="img/banner/zampas-bar-barman.jpg" alt="Zampas"></div>
+            <div class="slide"><img src="img/banner/zampas-bar-gin.jpg" alt="Zampas"></div>
+            <div class="slide"><img src="img/banner/zampas-bar-whiskey-sour.jpg" alt="Zampas"></div>
+            <div class="slide"><img src="img/banner/zampas-bar-whiskey.jpg" alt="Zampas"></div>
+        </div>
+        <div class="section" id="section4">
             <div class="pure-g">
                 <div class="pure-u-1">
                     <div class="mt-5 offer-box">
@@ -1023,23 +1040,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="section" id="section4">
-            <div class="intro">
-                <h2>
-                    Zampas Bar
-                </h2>
-                <span class="subheader">
-                    Lorem, ipsum
-                </span>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A enim harum maiores quasi placeat sunt
-                    voluptate vel quas minus, quam maxime deserunt blanditiis asperiores aliquam, deleniti magni
-                    dignissimos dolores adipisci!</p>
-            </div>
-            <div class="slide"><img src="img/banner/zampas-bar-barman.jpg" alt="Zampas"></div>
-            <div class="slide"><img src="img/banner/zampas-bar-gin.jpg" alt="Zampas"></div>
-            <div class="slide"><img src="img/banner/zampas-bar-whiskey-sour.jpg" alt="Zampas"></div>
-            <div class="slide"><img src="img/banner/zampas-bar-whiskey.jpg" alt="Zampas"></div>
         </div>
         <div class="section">
             <div class="pure-g box-x5">
@@ -1206,11 +1206,11 @@
             //initialising fullpage.js in the jQuery way
             $('#fullpage').fullpage({
                 lockAnchors: false,
-                anchors: ['ZampasDublin', 'Menus', 'About', 'Events', 'ZampasBar', 'ReviewsAndGallery',
+                anchors: ['ZampasDublin', 'Menus', 'About', 'ZampasBar', 'Events', 'ReviewsAndGallery',
                     'Newsletter', 'OpeningHours'
                 ],
                 lazyLoading: true,
-                controlArrows: false,
+                controlArrows: true,
                 // navigationTooltips: ['Zampas Dublin', 'Menus', 'Our Bar', 'Reviews and Gallery', 'Opening Hours'],
                 afterRender: function () {
                     setInterval(function () {
