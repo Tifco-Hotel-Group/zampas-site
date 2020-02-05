@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css"
+        integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="css/purecss/pure.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="css/owl/owl.carousel.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/owl/owl.theme.default.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" /> -->
+</head>
+
+<body class="dark">
+    <header class="dual-navw">
+        <a class="zampas-logo-desktop" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 409.71 122.85">
+                <g fill="#C38F3A">
+                    <path
+                        d="M126.46 74.91l19.21-27.2v-2.29h-22.86v2.29h18.29v.23l-19.21 27.2v2.29h24.23l.46-2.29h-20.12zM176.07 45.42l-13.49 32.01h2.74l3.43-8.23h16.23l3.43 8.23h4.12l-13.49-32.01h-2.97zm-6.4 21.49l7.09-16.92h.23l7.09 16.92h-14.41zM228.88 67.37h-.23l-13.72-21.95h-3.43v32.01h2.29V50.91h.23l13.49 21.49h.91l13.49-21.49h.23v26.52h3.66V45.42h-3.2zM279.63 45.42H268.2v32.01h3.66V66h7.77c8 0 12.8-4.8 12.8-10.29s-4.8-10.29-12.8-10.29zm0 18.29h-7.77v-16h7.77c5.26 0 8.92 3.66 8.92 8s-3.66 8-8.92 8zM320.32 45.42l-13.49 32.01h2.74L313 69.2h16.23l3.43 8.23h4.12l-13.49-32.01h-2.97zm-6.4 21.49l7.09-16.92h.23l7.09 16.92h-14.41zM358.5 52.96c0-3.43 2.97-6.4 7.32-6.4 5.94 0 10.06 5.03 10.06 5.03l1.37-1.14s-4.34-5.94-11.43-5.94-11.2 4.11-11.2 8.46c0 10.29 19.2 8.92 19.2 16 0 4.12-3.2 7.32-8.23 7.32-7.77 0-11.66-6.17-11.66-6.17l-1.37 1.14s4.34 7.09 13.03 7.09c7.54 0 12.12-4.57 12.12-9.37-.01-10.3-19.21-8.93-19.21-16.02zM82.92 53.58V42.33h-2.07L60.44 71.36h14.41v3.48H53.41l20.5-29.13H45.62v7.95l12.52.01L42.4 76.06l-.08-9.02h-8.03V55.86h8.04V42.33h13.46v-8.04h11.18v8.04h9.3l1.6-2.28h-8.62v-8.04H53.51v8.04H40.05v13.53h-8.04v15.75h8.05l.09 11.22h1.88l20.51-29.16-14.64-.01v-3.39h21.62L49.01 77.13h28.12v-8.05h-12.3l15.8-22.47v9.25h7.94v11.18h-7.94v13.51H66.97v8.01H55.79v-8.01H46.6l-1.61 2.28h8.52v8.01h15.74v-8.01h13.67v-13.5h7.93V53.58z" />
+                </g>
+            </svg></a>
+        <input type="checkbox" id="navcheck" role="button" title="menu">
+        <label for="navcheck" aria-hidden="true" title="menu">
+            <span class="burger">
+                <span class="bar"><span class="visuallyhidden">Menu</span></span>
+            </span>
+        </label>
+        <nav id="menu">
+            <a href="index.html?#ZampasDublin" class="nav-click">Home</a>
+            <a href="index.html?#Menus" class="nav-click">Menus</a>
+            <a href="index.html?#About" class="nav-click">About Us</a>
+            <a href="index.html?#ZampasBar" class="nav-click">Zampas Bar</a>
+            <a href="index.html?#Events" class="nav-click">Events</a>
+            <a href="index.html?#ReviewsAndGallery" class="nav-click">Gallery</a>
+            <a href="index.html?#Newsletter" class="nav-click">Newsletter</a>
+            <a href="index.html?#OpeningHours" class="nav-click">Opening Hours</a>
+            <a href="index.html?#ZampasDublin" title="Zampas Dublin Restaurant" class="zampas-logo-link nav-click">
+                <svg class="zampas-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 708.79 425.33">
+                    <path fill="none"
+                        d="M65.36 342.24h.51v-44.59l5.07 1.01v53.7h-5.07l-60.3-42.55h-.5v40.53H0v-50.66h5.07l60.29 42.56zM593.27 419.75v.51h44.59l-1.01 5.07h-53.7v-5.07l42.56-60.29v-.51h-40.53v-5.07h50.66v5.07l-42.57 60.29zM703.22 115.52h.51V70.93l5.07 1.01v53.7h-5.07l-60.29-42.56h-.51v40.53h-5.07V72.96h5.07l60.29 42.56zM81.06 65.36v.51h44.59l-1.01 5.07h-53.7v-5.07L113.5 5.58v-.51H72.96V0h50.66v5.07L81.06 65.36z" />
+                    <path fill="#C38F3A"
+                        d="M81.06 346.79v.51h44.59l-1.01 5.07h-53.7v-5.07l42.56-60.29v-.51H72.96v-5.07h50.66v5.07l-42.56 60.29zM210.76 334.13h-35.97l-7.6 18.24h-6.08L191 281.44h6.59l29.89 70.93h-9.12l-7.6-18.24zm-33.94-5.07h31.92l-15.71-37.49h-.51l-15.7 37.49zM307.03 341.22H305l-29.89-47.63h-.51v58.77h-5.07v-70.93h7.6l30.4 48.64h.51l30.4-48.64h7.09v70.93h-8.11V293.6h-.51l-29.88 47.62zM403.28 327.04v25.33h-8.11v-70.93h25.33c17.73 0 28.37 10.64 28.37 22.8s-10.64 22.8-28.37 22.8h-17.22zm17.23-5.07c11.65 0 19.76-8.11 19.76-17.73s-8.11-17.73-19.76-17.73h-17.23v35.47h17.23zM530.45 334.13h-35.97l-7.6 18.24h-6.08l29.89-70.93h6.59l29.89 70.93h-9.12l-7.6-18.24zm-33.94-5.07h31.92l-15.71-37.49h-.51l-15.7 37.49zM611.51 279.41c15.71 0 25.33 13.17 25.33 13.17l-3.04 2.53s-9.12-11.15-22.29-11.15c-9.63 0-16.21 6.59-16.21 14.19 0 15.71 42.56 12.67 42.56 35.47 0 10.64-10.13 20.77-26.85 20.77-19.25 0-28.88-15.71-28.88-15.71l3.04-2.53s8.61 13.68 25.84 13.68c11.15 0 18.24-7.09 18.24-16.21 0-15.71-42.56-12.67-42.56-35.47 0-9.62 9.12-18.74 24.82-18.74zM405.14 122.35V94.6h-3.55l-48.65 69.2h33.91v9.23h-52.46l48.86-69.43h-66.06v18l30.28.03-38.89 55.28-.18-22.47h-19.16v-27.58h19.17V94.6h32.09V75.44h27.58V94.6h21.44l3.17-4.51h-20.11V70.93h-36.59v19.16h-32.08v32.26h-19.17v36.6h19.19l.23 28.25h2.7l7.35-10.46 41.93-59.61-34.45-.03v-9h52.88l-48.86 69.44h65.64v-18.25h-29.73l39.02-55.5v23.07h18.91v27.58h-18.91v32.2h-32.56v19.09H340.5v-19.09h-21.21l-3.16 4.5h19.86v19.09h36.59v-19.09h32.56v-32.19h18.91v-36.6z" />
+                </svg>
+            </a>
+        </nav>
+        <button type="submit" class="primary-btn">Book a Table</button>
+    </header>
+    <div>
+        <div class="section">
+            <div class="pure-g mt-5">
+                <div class="pure-u-1 menu-text">
+                    <h2>Delicious. Mouth-watering. Tasty.</h2>
+                </div>
+            </div>
+            <div class="pure-g">
+                <div class="pure-u-1 menu-options">
+                    <div title="" class="menu-item active">Breakfast</div>
+                    <div title="" class="menu-item">Brunch</div>
+                    <div title="" class="menu-item">Lunch</div>
+                    <div title="" class="menu-item">Dinner</div>
+                    <div title="" class="menu-item">Sunday Lunch</div>
+                    <div title="" class="menu-item">Wine List</div>
+                </div>
+            </div>
+            <div class="pure-g">
+                <section id=idone class="pure-u-1 menucontainer box-x3">
+                    <div class="pure-g">
+                        <div class="pure-u-1">
+                            <article class="box-m2">
+                                <span class=menuheading>Zampas Breakfast Menu</span>
+                                <span class=menutime>
+                                    Monday - Friday 7am to 10.30am | Saturday - Sunday 7am to 11am
+                                </span>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="pure-g">
+                        <div class="pure-u-1 pure-u-md-1-3">
+                            <article class="box-x2">
+                                <span class=menusubheading>From the Kitchen</span>
+                                <p>
+                                    <span class=foodtitle>The Zampas full Irish</span>
+                                    <span class=foodtext>
+                                        Crispy Irish bacon, rare breed pork sausages, black & white pudding, slow roast
+                                        plum tomato grilled portobello mushroom & 2 free range fried eggs</span>
+                                    <span class="foodallergens">(1, 3, 7, 12)</span>
+                                    <span class="foodprice">
+                                        €21.50
+                                    </span>
+                                </p>
+                                <p>
+                                    <span class=foodtitle>The Zampas vegetarian</span>
+                                    <span class=foodtext>                                        
+                                        Grilled haloumi, slow roast plum tomato, grilled portobello mushrooms, potato cake & spiced beans</span>
+                                    <span class="foodallergens">(NA)</span>
+                                    <span class="foodprice">€NA</span>
+                                </p>
+                                <p>
+                                    <span class=foodtitle>Rainbow quinoa breakfast bowl</span>
+                                    <span class=foodtext>                                        
+                                        Iron rich kale pesto, soft boiled eggs, cherry tomato, fresh avocado & walnuts</span>
+                                    <span class="foodallergens">(1, 3, 7, 12)</span>
+                                    <span class="foodprice">€21.50</span>
+                                </p>
+                                <p>
+                                    <span class=foodtitle>Flahavans porridge</span>
+                                    <span class=foodtext>                                        
+                                        Made with milk or water</span>
+                                    <span class="foodallergens">(1, 3, 7, 12)</span>
+                                    <span class="foodprice">€21.50</span>
+                                </p>
+                                <p>
+                                    <span class=foodtitle>Benedict</span>
+                                    <span class=foodtext>                                        
+                                        Crispy Irish bacon, free range poached eggs, hollandaise on grilled
+                                        sourdough</span>
+                                    <span class="foodallergens">(1, 3, 7, 12)</span>
+                                    <span class="foodprice">€21.50</span>
+                                </p>
+                                <p>
+                                    <span class=foodtitle>Royale</span>
+                                    <span class=foodtext>                                        
+                                        Burren oak smoked salmon, sautéed spinach, free range poached eggs, hollandaise
+                                        on grilled sourdough</span>
+                                    <span class="foodallergens">(1, 3, 7, 12)</span>
+                                    <span class="foodprice">€21.50</span>
+                                </p>
+                                <p>
+                                    <span class=foodtitle>Huevos rancheros</span>
+                                    <span class=foodtext>                                        
+                                        Baked free range eggs, tomato, red pepper & chili ragout, fresh coriander & warm
+                                        tortillas</span>
+                                    <span class="foodallergens">(1, 3, 7, 12)</span>
+                                    <span class="foodprice">€21.50</span>
+                                </p>
+                                <p>
+                                    <span class=foodtitle>Huevos rancheros</span>
+                                    <span class=foodtext>                                        
+                                        Baked free range eggs, tomato, red pepper & chili ragout, fresh coriander & warm
+                                        tortillas</span>
+                                    <span class="foodallergens">(1, 3, 7, 12)</span>
+                                    <span class="foodprice">€21.50</span>
+                                </p>
+                                <p>
+                                    <span class=foodtitle>Light & fluffy Sweet potato pancakes</span>
+                                    <span class=foodtext>                                        
+                                        Caramelized banana, crispy Irish bacon, maple syrup & toasted pecans</span>
+                                </p>
+                                <p>
+                                    <span class=foodtitle>Free range egg omelette</span>
+                                    <span class=foodtext>                                        
+                                        Irish bacon, smoked Dublin cheddar, spring onion, cherry tomato, mushroom,
+                                        smoked
+                                        salmon, spinach</span>
+                                </p>
+                                <p>
+                                    <span class=foodtitle>John stone dry aged 6oz sirloin</span>
+                                    <span class=foodtext>                                        
+                                        2 free range eggs, pico de gallo, fresh avocado & potato cake</span>
+                                </p>
+                            </article>
+                        </div>
+                        <div class="pure-u-1 pure-u-md-1-3">
+                            <article class="box-x2">
+                                <span class=menusubheading>Continental Cold Buffet</span>
+                                <p>
+                                    <span class=foodtitle>From the bakery</span>
+                                    <span class=foodtext>
+                                        
+                                        Selection of freshly baked artisan breads & breakfast pastries</span>
+                                </p>
+                                <p>
+                                    <span class=foodtitle>Smoothies</span>
+                                    <span class=foodtext>
+                                        
+                                        Strawberry, raspberry & mango made with fresh fruit, honey & Irish natural
+                                        yoghurt</span>
+                                </p>
+                                <p>
+                                    <span class=foodtitle>Fresh Fruits</span>
+                                    <span class=foodtext>
+                                        
+                                        Seasonal fresh fruit salad, cut pineapple, orange segments & poached stone fruit
+                                        in
+                                        a star anise syrup</span>
+                                </p>
+                                <p>
+                                    <span class=foodtitle>Charcuterie</span>
+                                    <span class=foodtext>
+                                        
+                                        Iberico ham, chorizo, salami, honey & mustard baked ham</span>
+                                </p>
+                                <p>
+                                    <span class=foodtitle>Artisan cheeseboard</span>
+                                    <span class=foodtext>
+                                        
+                                        Tipperary brie, Cashel Blue, St. Tola goat's cheese</span>
+                                </p>
+                                <p>
+                                    <span class=foodtitle>Freshly squeezed</span>
+                                    <span class=foodtext>
+                                        
+                                        Orange juice, apple, pineapple, grapefruit, cranberry, tomato</span>
+                                </p>
+                                <p>
+                                    <span class=foodtitle>Nuts, grains & cereals</span>
+                                    <span class=foodtext>
+                                        
+                                        Bircher muesli, homemade granola bars, selection of cereal’s</span>
+                                </p>
+                            </article>
+                        </div>
+                        <div class="pure-u-1 pure-u-md-1-3">
+                            <article class="box-x2">
+                                <span class=menusubheading>Tea</span>
+                                <p>
+                                    <span class=foodtitle>Zampas breakfast blend</span>
+                                </p>
+                                <p>
+                                    <span class=foodtitle>Selection of specialised teas</span>
+                                    <span class=foodtext>
+                                        
+                                        Earl grey, Darjeeling, camomile, peppermint, oolong</span>
+                                </p>
+                                <span class=menusubheading>Coffee</span>
+                                <p>
+                                    <span class=foodtitle>Pot of coffee</span>
+                                    <span class=foodtext>
+                                        
+                                        Seasonal fresh fruit salad, cut pineapple, orange segments & poached stone fruit
+                                        in
+                                        a star anise syrup</span>
+                                </p>
+                                <p>
+                                    <span class=foodtitle>Specialised coffees</span>
+                                    <span class=foodtext>
+                                        
+                                        Iberico ham, chorizo, salami, honey & mustard baked ham</span>
+                                </p>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="pure-g">
+                        <div class="pure-u-1 pure-u-md-1-4">
+                            <article class="box-x2">
+                                <span class=allergenheading>Allergens</span>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="pure-g">
+                        <div class="pure-u-1 pure-u-md-1-4">
+                            <article class="box-x2">
+                                <span class=allergen>
+                                    1. Gluten
+                                </span>
+                                <span class=allergen>
+                                    2. Crustaceans
+                                </span>
+                                <span class=allergen>
+                                    3. Eggs
+                                </span>
+                                <span class=allergen>
+                                    4. Fish
+                                </span>
+                            </article>
+                        </div>
+                        <div class="pure-u-1 pure-u-md-1-4">
+                            <article class="box-x2">
+                                <span class=allergen>
+                                    5. Peanuts
+                                </span>
+                                <span class=allergen>
+                                    6. Soy
+                                </span>
+                                <span class=allergen>
+                                    7. Milk
+                                </span>
+                                <span class=allergen>
+                                    8. Tree Nuts
+                                </span>
+                            </article>
+                        </div>
+                        <div class="pure-u-1 pure-u-md-1-4">
+                            <article class="box-x2">
+                                <span class=allergen>
+                                    9. Celery
+                                </span>
+                                <span class=allergen>
+                                    10. Mustard
+                                </span>
+                                <span class=allergen>
+                                    11. Sesame
+                                </span>
+                                <span class=allergen>
+                                    12. Sulphites
+                                </span>
+                            </article>
+                        </div>
+                        <div class="pure-u-1 pure-u-md-1-4">
+                            <article class="box-x2">
+                                <span class=allergen>
+                                    13. Lupin
+                                </span>
+                                <span class=allergen>
+                                    14. Molluscs
+                                </span>
+                                <span class=allergen>
+
+                                </span>
+                                <span class=allergen>
+
+                                </span>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="pure-g">
+                        <div class="pure-u-1">
+                            <article class="box-m2">
+                                <a href="#" class="standardlink" title="download menu">Download Menu</a>
+                            </article>
+                        </div>
+                        <div class="pure-u-1">
+                            <article class="box-m2">
+                                <div class="divider">
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <footer class="menu-page">
+            <div class="box-x10">
+                <div class="pure-g ">
+                    <div class="pure-u-1-2 pure-left">
+                        <div class="box-x2 box-2">
+                            Terms / Privacy Policy / Data Access Request
+                        </div>
+                    </div>
+                    <div class="pure-u-1-2 pure-right">
+                        <div class="box-x2 box-2">
+                            <img src="img/svg/Facebook.svg" alt="Facbook" class="pure-img">
+                            <img src="img/svg/Twitter.svg" alt="Twitter" class="pure-img">
+                            <img src="img/svg/Instagram.svg" alt="Instagram" class="pure-img">
+                            <img src="img/svg/Youtube.svg" alt="Youtube" class="pure-img">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        //using document ready...
+        $(document).ready(function () {
+            $(".nav-click").on("click", function () {
+                $("#navcheck").trigger("click");
+            });
+        });
+    </script>
+</body>
+
+</html>
