@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css"
+        integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="css/purecss/pure.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="css/owl/owl.carousel.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/owl/owl.theme.default.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" /> -->
+</head>
+
+<body class="dark">
+    <header class="dual-navw">
+        <a class="zampas-logo-desktop" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 409.71 122.85">
+                <g fill="#C38F3A">
+                    <path
+                        d="M126.46 74.91l19.21-27.2v-2.29h-22.86v2.29h18.29v.23l-19.21 27.2v2.29h24.23l.46-2.29h-20.12zM176.07 45.42l-13.49 32.01h2.74l3.43-8.23h16.23l3.43 8.23h4.12l-13.49-32.01h-2.97zm-6.4 21.49l7.09-16.92h.23l7.09 16.92h-14.41zM228.88 67.37h-.23l-13.72-21.95h-3.43v32.01h2.29V50.91h.23l13.49 21.49h.91l13.49-21.49h.23v26.52h3.66V45.42h-3.2zM279.63 45.42H268.2v32.01h3.66V66h7.77c8 0 12.8-4.8 12.8-10.29s-4.8-10.29-12.8-10.29zm0 18.29h-7.77v-16h7.77c5.26 0 8.92 3.66 8.92 8s-3.66 8-8.92 8zM320.32 45.42l-13.49 32.01h2.74L313 69.2h16.23l3.43 8.23h4.12l-13.49-32.01h-2.97zm-6.4 21.49l7.09-16.92h.23l7.09 16.92h-14.41zM358.5 52.96c0-3.43 2.97-6.4 7.32-6.4 5.94 0 10.06 5.03 10.06 5.03l1.37-1.14s-4.34-5.94-11.43-5.94-11.2 4.11-11.2 8.46c0 10.29 19.2 8.92 19.2 16 0 4.12-3.2 7.32-8.23 7.32-7.77 0-11.66-6.17-11.66-6.17l-1.37 1.14s4.34 7.09 13.03 7.09c7.54 0 12.12-4.57 12.12-9.37-.01-10.3-19.21-8.93-19.21-16.02zM82.92 53.58V42.33h-2.07L60.44 71.36h14.41v3.48H53.41l20.5-29.13H45.62v7.95l12.52.01L42.4 76.06l-.08-9.02h-8.03V55.86h8.04V42.33h13.46v-8.04h11.18v8.04h9.3l1.6-2.28h-8.62v-8.04H53.51v8.04H40.05v13.53h-8.04v15.75h8.05l.09 11.22h1.88l20.51-29.16-14.64-.01v-3.39h21.62L49.01 77.13h28.12v-8.05h-12.3l15.8-22.47v9.25h7.94v11.18h-7.94v13.51H66.97v8.01H55.79v-8.01H46.6l-1.61 2.28h8.52v8.01h15.74v-8.01h13.67v-13.5h7.93V53.58z" />
+                </g>
+            </svg></a>
+        <input type="checkbox" id="navcheck" role="button" title="menu">
+        <label for="navcheck" aria-hidden="true" title="menu">
+            <span class="burger">
+                <span class="bar"><span class="visuallyhidden">Menu</span></span>
+            </span>
+        </label>
+        <nav id="menu">
+            <a href="index.html?#ZampasDublin" class="nav-click">Home</a>
+            <a href="index.html?#Menus" class="nav-click">Menus</a>
+            <a href="index.html?#About" class="nav-click">About Us</a>
+            <a href="index.html?#ZampasBar" class="nav-click">Zampas Bar</a>
+            <a href="index.html?#Events" class="nav-click">Events</a>
+            <a href="index.html?#ReviewsAndGallery" class="nav-click">Gallery</a>
+            <a href="index.html?#Newsletter" class="nav-click">Newsletter</a>
+            <a href="index.html?#OpeningHours" class="nav-click">Opening Hours</a>
+            <a href="index.html?#ZampasDublin" title="Zampas Dublin Restaurant" class="zampas-logo-link nav-click">
+                <svg class="zampas-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 708.79 425.33">
+                    <path fill="none"
+                        d="M65.36 342.24h.51v-44.59l5.07 1.01v53.7h-5.07l-60.3-42.55h-.5v40.53H0v-50.66h5.07l60.29 42.56zM593.27 419.75v.51h44.59l-1.01 5.07h-53.7v-5.07l42.56-60.29v-.51h-40.53v-5.07h50.66v5.07l-42.57 60.29zM703.22 115.52h.51V70.93l5.07 1.01v53.7h-5.07l-60.29-42.56h-.51v40.53h-5.07V72.96h5.07l60.29 42.56zM81.06 65.36v.51h44.59l-1.01 5.07h-53.7v-5.07L113.5 5.58v-.51H72.96V0h50.66v5.07L81.06 65.36z" />
+                    <path fill="#C38F3A"
+                        d="M81.06 346.79v.51h44.59l-1.01 5.07h-53.7v-5.07l42.56-60.29v-.51H72.96v-5.07h50.66v5.07l-42.56 60.29zM210.76 334.13h-35.97l-7.6 18.24h-6.08L191 281.44h6.59l29.89 70.93h-9.12l-7.6-18.24zm-33.94-5.07h31.92l-15.71-37.49h-.51l-15.7 37.49zM307.03 341.22H305l-29.89-47.63h-.51v58.77h-5.07v-70.93h7.6l30.4 48.64h.51l30.4-48.64h7.09v70.93h-8.11V293.6h-.51l-29.88 47.62zM403.28 327.04v25.33h-8.11v-70.93h25.33c17.73 0 28.37 10.64 28.37 22.8s-10.64 22.8-28.37 22.8h-17.22zm17.23-5.07c11.65 0 19.76-8.11 19.76-17.73s-8.11-17.73-19.76-17.73h-17.23v35.47h17.23zM530.45 334.13h-35.97l-7.6 18.24h-6.08l29.89-70.93h6.59l29.89 70.93h-9.12l-7.6-18.24zm-33.94-5.07h31.92l-15.71-37.49h-.51l-15.7 37.49zM611.51 279.41c15.71 0 25.33 13.17 25.33 13.17l-3.04 2.53s-9.12-11.15-22.29-11.15c-9.63 0-16.21 6.59-16.21 14.19 0 15.71 42.56 12.67 42.56 35.47 0 10.64-10.13 20.77-26.85 20.77-19.25 0-28.88-15.71-28.88-15.71l3.04-2.53s8.61 13.68 25.84 13.68c11.15 0 18.24-7.09 18.24-16.21 0-15.71-42.56-12.67-42.56-35.47 0-9.62 9.12-18.74 24.82-18.74zM405.14 122.35V94.6h-3.55l-48.65 69.2h33.91v9.23h-52.46l48.86-69.43h-66.06v18l30.28.03-38.89 55.28-.18-22.47h-19.16v-27.58h19.17V94.6h32.09V75.44h27.58V94.6h21.44l3.17-4.51h-20.11V70.93h-36.59v19.16h-32.08v32.26h-19.17v36.6h19.19l.23 28.25h2.7l7.35-10.46 41.93-59.61-34.45-.03v-9h52.88l-48.86 69.44h65.64v-18.25h-29.73l39.02-55.5v23.07h18.91v27.58h-18.91v32.2h-32.56v19.09H340.5v-19.09h-21.21l-3.16 4.5h19.86v19.09h36.59v-19.09h32.56v-32.19h18.91v-36.6z" />
+                </svg>
+            </a>
+        </nav>
+        <button type="submit" class="primary-btn">Book a Table</button>
+    </header>
+    <div>
+        <div class="section">
+            <div class="pure-g mt-5">
+                <div class="pure-u-1 menu-text">
+                    <h2>Delicious. Mouth-watering. Tasty.</h2>
+                </div>
+            </div>
+            <div class="pure-g">
+                <div class="pure-u-1 menu-options hide">
+                    <div title="" class="menu-item"><a href="breakfast.html" title="Breakfast Menu">Breakfast</a></div>
+                    <div title="" class="menu-item"><a href="brunch.html" title="Brunch Menu">Brunch</a></div>
+                    <div title="" class="menu-item"><a href="lunch.html" title="Lunch Menu">Lunch</a></div>
+                    <div title="" class="menu-item active"><a href="dinner.html" title="Dinner Menu">Dinner</a></div>
+                    <div title="" class="menu-item"><a href="sunday-lunch.html" title="Sunday Lunch Menu">Sunday
+                            Lunch</a></div>
+                    <div title="" class="menu-item"><a href="wine-list.html" title="Wine List">Wine List</a></div>
+                </div>
+                <div class="pure-u-1 select-box">
+                    <div class="select-box__current" tabindex="1">
+                        <div class="select-box__value"><input class="select-box__input" type="radio" id="0" value="1"
+                                name="Ben" checked="checked" onclick="location.href='breakfast.html';" />
+                            <p class="select-box__input-text">Breakfast</p>
+                        </div>
+                        <div class="select-box__value"><input class="select-box__input" type="radio" id="1" value="2"
+                                name="Ben" checked="checked" onclick="location.href='brunch.html';" />
+                            <p class="select-box__input-text">Brunch</p>
+                        </div>
+                        <div class="select-box__value"><input class="select-box__input" type="radio" id="2" value="3"
+                                name="Ben" checked="checked" onclick="location.href='lunch.html';" />
+                            <p class="select-box__input-text">Lunch</p>
+                        </div>
+                        <div class="select-box__value"><input class="select-box__input" type="radio" id="4" value="5"
+                                name="Ben" checked="checked" onclick="location.href='sunday-lunch.html';" />
+                            <p class="select-box__input-text">Sunday Lunch</p>
+                        </div>
+                        <div class="select-box__value"><input class="select-box__input" type="radio" id="5" value="6"
+                                name="Ben" checked="checked" onclick="location.href='wine-list.html';" />
+                            <p class="select-box__input-text">Wine List</p>
+                        </div>
+                        <div class="select-box__value"><input class="select-box__input" type="radio" id="3" value="4"
+                                name="Ben" checked="checked" onclick="location.href='dinner.html';" />
+                            <p class="select-box__input-text">Dinner</p>
+                        </div>
+                        <img class="select-box__icon" src="img/svg/down-arrow.svg" alt="Arrow Icon"
+                            aria-hidden="true" />
+                    </div>
+                    <ul class="select-box__list">
+                        <li><label class="select-box__option" for="0" aria-hidden="true">Breakfast</label></li>
+                        <li><label class="select-box__option" for="1" aria-hidden="true">Brunch</label></li>
+                        <li><label class="select-box__option" for="2" aria-hidden="true">Lunch</label></li>
+                        <li><label class="select-box__option" for="3" aria-hidden="true">Dinner</label></li>
+                        <li><label class="select-box__option" for="4" aria-hidden="true">Sunday Lunch</label>
+                        </li>
+                        <li><label class="select-box__option" for="5" aria-hidden="true">Wine List</label></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pure-g">
+                <section class="pure-u-1 menucontainer box-x3">
+                    <div class="pure-g">
+                        <div class="pure-u-1">
+                            <article class="box-m4 ">
+                                <h2 class=menuheading>Zampas Dinner Menu</h2>
+                                <span class=menutime>
+                                    Monday - Friday 7am to 10.30am | Saturday - Sunday 7am to 11am
+                                </span>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="pure-g">
+                        <div class="pure-u-1 pure-u-md-1-2">
+                            <div class="pure-g">
+                                <div class="pure-u-1">
+                                    <article class="box-2 menu-border">
+                                        <h3 class=menusubheading>Primeros Platos</h3>
+                                        <div class="box-2">
+                                            <span class=foodtitle>Pork Belly Chicharrones</span>
+                                            <span class=foodtext>
+                                                Succulent crispy pork belly with Kimchi, smoked tofu puree and peanut
+                                                crum</span>
+                                            <span class="foodallergens">(4, 5, 6, 11)</span>
+                                            <span class="foodprice">
+                                                €12
+                                            </span>
+                                        </div>
+                                        <div class="box-2">
+                                            <span class=foodtitle>Croquetas de Carne</span>
+                                            <span class=foodtext>
+                                                Grilled haloumi, slow roast plum tomato, grilled portobello mushrooms,
+                                                potato
+                                                cake & spiced beans</span>
+                                            <span class="foodallergens">(1, 3, 6, 7, 9, 12)</span>
+                                            <span class="foodprice">€12.50</span>
+                                        </div>
+                                        <div class="box-2">
+                                            <span class=foodtitle>Magret de Pato</span>
+                                            <span class=foodtext>Sliced duck breast and confit of duck bon-bon with
+                                                roasted
+                                                pineapple & chili salsa, pickled vegetables and teriyaki
+                                            </span>
+                                            <span class="foodallergens">(1, 3, 6, 7, 11)</span>
+                                            <span class="foodprice">€11.50</span>
+                                        </div>
+                                        <div class="box-2">
+                                            <span class=foodtitle>Solterito</span>
+                                            <span class=foodtext>A Peruvian dish of goat’s cheese espuma, broad beans,
+                                                purple
+                                                potato and olives
+                                            </span>
+                                            <span class="foodallergens">(1, 7, 8, 10)</span>
+                                            <span class="foodprice">€13.50</span>
+                                        </div>
+                                        <div class="box-2">
+                                            <span class=foodtitle>Ceviche</span>
+                                            <span class=foodtext>
+                                                <em>Considered the national dish of Peru</em><br />
+                                                Fresh seabass marinated in Peruvian Leche de Tigre, with avocado, sweet
+                                                potato
+                                                and
+                                                crispy tortillas </span>
+                                            <span class="foodallergens">(1, 4, 7)</span>
+                                            <span class="foodprice">€13.50</span>
+                                        </div>
+                                        <div class="box-2">
+                                            <span class=foodtitle>Sushi Nigiri</span>
+                                            <span class=foodtext>
+                                                Tuna with wasabi mayo, salmon with black garlic, halibut with yuzu,
+                                                seabass with
+                                                miso
+                                            </span>
+                                            <span class="foodallergens">(3, 4, 6, 10)</span>
+                                            <span class="foodprice">€12.50</span>
+                                        </div>
+                                        <div class="box-2">
+                                            <span class=foodtitle>Sopa Quechua</span>
+                                            <span class=foodtext>
+                                                An Andean spiced sweet potato & coconut soup with coriander oil and
+                                                served with
+                                                sweet potato crisps</span>
+                                            <span class="foodallergens">(9)</span>
+                                            <span class="foodprice">€7.50</span>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="pure-g">
+                                <div class="pure-u-1">
+                                    <article class="box-2 menu-border">
+                                        <h3 class=menusubheading>PLATOS ADICIONALES</h3>
+                                        <div class="pure-g">
+                                            <div class="pure-u-1 pure-u-md-1-2">
+                                                <div class="box-2">
+                                                    <span class=foodtitle>Twice cooked Duck fat chips</span>
+                                                    <span class="foodallergens">(NA)</span>
+                                                    <span class="foodprice">€5</span>
+                                                </div>
+                                                <div class="box-2">
+                                                    <span class=foodtitle>Flame grilled sweetcorn</span>
+                                                    <span class=foodtext>Feta, red onion & spicy green sauce</span>
+                                                    <span class="foodallergens">(3, 7, 10)</span>
+                                                    <span class="foodprice">€5</span>
+                                                </div>
+                                                <div class="box-2">
+                                                    <span class=foodtitle>Yuca fries</span>
+                                                    <span class=foodtext>With parmesan shavings & truffle aioli</span>
+                                                    <span class="foodallergens">(3, 10)</span>
+                                                    <span class="foodprice">€5</span>
+                                                </div>
+                                                <div class="box-2">
+                                                    <span class=foodtitle>Peruvian egg fried rice</span>
+                                                    <span class=foodtext>Mixed peppers, spring onion and Soy</span>
+                                                    <span class="foodallergens">(3, 6)</span>
+                                                    <span class="foodprice">€5</span>
+                                                </div>
+                                            </div>
+                                            <div class="pure-u-1 pure-u-md-1-2">
+                                                <div class="box-2">
+                                                    <span class=foodtitle>Creamy mash</span>
+                                                    <span class=foodtext>Crispy onions & chorizo</span>
+                                                    <span class="foodallergens">(1, 7)</span>
+                                                    <span class="foodprice">€5</span>
+                                                </div>
+                                                <div class="box-2">
+                                                    <span class=foodtitle>Spiced lima beans</span>
+                                                    <span class=foodtext>Sour cream & coriander</span>
+                                                    <span class="foodallergens">(7)</span>
+                                                    <span class="foodprice">€5</span>
+                                                </div>
+                                                <div class="box-2">
+                                                    <span class=foodtitle>Salad</span>
+                                                    <span class=foodtext>Crisp lettuce, fresh mango, ginger pickled
+                                                        vegetables,
+                                                        compressed watermelon & lime dressing</span>
+                                                    <span class="foodallergens">(3, 10)</span>
+                                                    <span class="foodprice">€5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pure-u-1 pure-u-md-1-2">
+                            <article class="box-2 menu-border">
+                                <h3 class=menusubheading>Plato Principal</h3>
+                                <div class="box-2">
+                                    <h4>DEL MAR</h4>
+                                    <span class=foodtitle>
+                                        Our fish & shellfish is sourced fresh daily from handpicked
+                                        artisan fish mongers</span>
+                                </div>
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-md-1-2">
+                                        <div class="box-2">
+                                            <span class=foodtitle>Hipoglosa de Santiago</span>
+                                            <span class=foodtext>
+                                                Grilled halibut with creamed coco beans, chorizo jam and slow
+                                                roast
+                                                tomatoes
+                                            </span>
+                                            <span class="foodallergens">(4, 7, 9, 12)</span>
+                                            <span class="foodprice">€28.50</span>
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-1 pure-u-md-1-2">
+                                        <div class="box-2">
+                                            <span class=foodtitle>Salmão Assado</span>
+                                            <span class=foodtext>
+                                                Pan roast salmon with the Brazilian fish stew Moqueca Baiana,
+                                                crispy soft-shell crab, baby fennel and samphire. Served with
+                                                saffron potatoes
+                                            </span>
+                                            <span class="foodallergens">(1, 2, 4, 7, 9)</span>
+                                            <span class="foodprice">€26</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-2">
+                                    <h4>DEL LA TIERRA</h4>
+                                </div>
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-md-1-3">
+                                        <div class="box-2">
+                                            <span class=foodtitle>Pastel de Batata</span>
+                                            <span class=foodtext>
+                                                Crispy sweet potato cakes with braised leeks, spiced cauliflower
+                                                and king oyster mushrooms
+                                            </span>
+                                            <span class="foodallergens">(1, 3, 7)</span>
+                                            <span class="foodprice">€21</span>
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-1 pure-u-md-1-3">
+                                        <div class="box-2">
+                                            <span class=foodtitle>Tempura de Tofu de Lima</span>
+                                            <span class=foodtext>
+                                                Tempura of silken tofu with baby bok choy, pickled carrots,
+                                                peanut crumb and teriyaki sauce
+                                            </span>
+                                            <span class="foodallergens">(1, 5, 6, 11)</span>
+                                            <span class="foodprice">€19.50</span>
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-1 pure-u-md-1-3">
+                                        <div class="box-2">
+                                            <span class=foodtitle>Pollo Saltado</span>
+                                            <span class=foodtext>
+                                                Corn fed chicken breast, stir fried vegetables, soy and chili
+                                                paste served with Andean confit of potato
+                                            </span>
+                                            <span class="foodallergens">(6)</span>
+                                            <span class="foodprice">€28</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-2">
+                                    <h4>DEL FUEGO</h4>
+                                    <span class=foodtitle>
+                                        We have sourced the best quality meats including 28-day aged grass &
+                                        herb fed natural Irish beef from John Stone’s handpicked cuts, to sugar
+                                        pit 13-day aged Bacon from Hannan’s local small farmers
+                                    </span>
+                                </div>
+                                <div class="box-2">
+                                    <h5>A LA PARRILLA</h5>
+                                    <span class=foodtitle>
+                                        <em>A celebration of incredible meat cooked on the flame that is the
+                                            cornerstone of South American cooking....</em>
+                                    </span>
+                                </div>
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-md-1-3">
+                                        <div class="box-2">
+                                            <span class=foodtitle>28-day dry aged 12oz ribeye</span>
+                                            <span class="foodallergens">(NA)</span>
+                                            <span class="foodprice">€36</span>
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-1 pure-u-md-1-3">
+                                        <div class="box-2">
+                                            <span class=foodtitle>28-day dry aged 10oz sirloin</span>
+                                            <span class="foodallergens">(NA)</span>
+                                            <span class="foodprice">€34</span>
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-1 pure-u-md-1-3">
+                                        <div class="box-2">
+                                            <span class=foodtitle>28-day dry aged 8oz fillet</span>
+                                            <span class="foodallergens">(NA)</span>
+                                            <span class="foodprice">€38</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-2">
+                                    <span class=foodtitle>Oak smoked Venezuelan Style lamb chops</span>
+                                    <span class=foodtext>
+                                        Salsa Verde, pan jus & maple roasted hazelnuts</span>
+                                    <span class="foodallergens">(7)</span>
+                                    <span class="foodprice">€NA</span>
+                                </div>
+                                <div class="box-2">
+                                    <span class=foodtext>
+                                        All served with, braised onion, balsamic roast cherry tomatoes, grilled
+                                        king oyster mushroom and Duck Fat Chips</span>
+                                </div>
+                                <div class="box-2">
+                                    <span class=foodtext>
+                                        <strong>Choose your sauce:</strong> Chimichurri / Bearnaise / Triple
+                                        peppercorn / Roasted garlic butter
+                                    </span>
+                                </div>
+                                <div class="box-2">
+                                    <span class=foodtext>
+                                        <strong>Enhance your steak:</strong> Crispy hens’ egg (3) - €5 / Grilled
+                                        prawn & chorizo skewer (2) - €6.60 / Seared foie-gras (NA) - €8
+                                    </span>
+                                </div>
+                                <div class="box-2">
+                                    <h4>ASADOR</h4>
+                                    <span class=foodtitle>
+                                        <em>Slow and low cooking of beautiful cuts of meat to be shared by
+                                            family & friends in the South American way....</em>
+                                    </span>
+                                </div>
+                                <div class="box-2">
+                                    <h4>PARA DOS (FOR 2 PERSON)</h4>
+                                </div>
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-md-1-2">
+                                        <div class="box-2">
+                                            <span class=foodtitle>Peruvian style rotisserie chicken</span>
+                                            <span class=foodtext>
+                                                Spicy green sauce, duck fat chips and grilled corn. Served with
+                                                crisp lettuce, fresh mango, pickled vegetables and a compressed
+                                                watermelon & lime vinaigrette
+                                            </span>
+                                            <span class="foodallergens">(3, 7, 10)</span>
+                                            <span class="foodprice">€50</span>
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-1 pure-u-md-1-2">
+                                        <div class="box-2">
+                                            <span class=foodtitle>Argentinian Style slow cooked wing sirloin on
+                                                the bone (28-day dry aged sirloin) (800g)</span>
+                                            <span class=foodtext>
+                                                Duck fat chips, braised onions and balsamic roasted tomatoes and
+                                                chimichurri sauce. Served with crisp lettuce, fresh mango,
+                                                pickled vegetables and a compressed watermelon & lime
+                                                vinaigrette
+                                            </span>
+                                            <span class="foodallergens">(9, 10)</span>
+                                            <span class="foodprice">€90</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-2">
+                                    <h4>PARA UNO (FOR ONE)</h4>
+                                </div>
+                                <div class="box-2 signature-dish">
+                                    <h4>A SIGNATURE DISH</h4>
+                                    <span class=foodtitle>10-day dry cured sugar pit bacon chop</span>
+                                    <span class=foodtext>
+                                        Incredibly succulent and served with a crispy hens’ egg, pineapple
+                                        relish, braised shallots and served with creamy mash, crispy onions &
+                                        chorizo</span>
+                                    <span class="foodallergens">(1, 3, 7, 9, 10)</span>
+                                    <span class="foodprice">€28</span>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="pure-g">
+                        <div class="pure-u-1">
+                            <article class="box-2 menu-border">
+                                <h3 class=menusubheading>Postres</h3>
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-md-1-2">
+                                        <div class="box-2">
+                                            <span class=foodtitle>Banana parfait</span>
+                                            <span class=foodtext>
+                                                Peanut butter ice cream, caramel popcorn, mango & lime, pecan
+                                                tuile</span>
+                                            <span class="foodallergens">(1, 3, 5, 7, 8)</span>
+                                            <span class="foodprice">€8</span>
+                                        </div>
+                                        <div class="box-2">
+                                            <span class=foodtitle>White Chocolate Cheesecake</span>
+                                            <span class=foodtext>
+                                                Orange & passionfruit jelly and mango espuma. Topped with merringues
+                                            </span>
+                                            <span class="foodallergens">(1, 3, 6, 7)</span>
+                                            <span class="foodprice">€8</span>
+                                        </div>
+                                    </div>
+                                    <div class="pure-u-1 pure-u-md-1-2">
+                                        <div class="box-2">
+                                            <span class=foodtitle>Avocado & mascarpone mousse</span>
+                                            <span class=foodtext>
+                                                Strawberries, micro basil, lime gel and strawberry sorbet. On a
+                                                shortbread biscuit</span>
+                                            <span class="foodallergens">(1, 3, 7)</span>
+                                            <span class="foodprice">€8</span>
+                                        </div>
+                                        <div class="box-2">
+                                            <span class=foodtitle>Corleggy Artisan Cheeseboard</span>
+                                            <span class=foodtext>
+                                                Served with elderflower & crabapple, sliced apple and Miller’s crackers
+                                                and oatcakes</span>
+                                            <span class="foodallergens">(1, 7)</span>
+                                            <span class="foodprice">€12.50</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-2">
+                                    <span class=foodtitle>Selection of artisan gelato</span>
+                                    <span class=foodtext>
+                                        Mini meringues and fresh berries</span>
+                                    <span class="foodallergens">(3, 7)</span>
+                                    <span class="foodprice">€8</span>
+                                </div>
+                                <div class="box-2 signature-dish">
+                                    <h4>OUR SIGNATURE DISH</h4>
+                                    <span class=foodtitle>Asador Grilled Pineapple</span>
+                                    <span class=foodtext>
+                                        Basted in rum syrup with coconut sorbet and polenta sponge</span>
+                                    <span class="foodallergens">(3)</span>
+                                    <span class="foodprice">€8</span>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="pure-g">
+                        <div class="pure-u-1">
+                            <article class="box-2 allergen-border">
+                                <h4 class=allergenheading>Allergens</h4>
+                                <div class="pure-g">
+                                    <div class="pure-u-1-2 pure-u-md-1-4">
+                                        <span class=allergen>
+                                            1. Gluten
+                                        </span>
+                                        <span class=allergen>
+                                            2. Crustaceans
+                                        </span>
+                                        <span class=allergen>
+                                            3. Eggs
+                                        </span>
+                                        <span class=allergen>
+                                            4. Fish
+                                        </span>
+                                    </div>
+                                    <div class="pure-u-1-2 pure-u-md-1-4">
+                                        <span class=allergen>
+                                            5. Peanuts
+                                        </span>
+                                        <span class=allergen>
+                                            6. Soy
+                                        </span>
+                                        <span class=allergen>
+                                            7. Milk
+                                        </span>
+                                        <span class=allergen>
+                                            8. Tree Nuts
+                                        </span>
+                                    </div>
+                                    <div class="pure-u-1-2 pure-u-md-1-4">
+                                        <span class=allergen>
+                                            9. Celery
+                                        </span>
+                                        <span class=allergen>
+                                            10. Mustard
+                                        </span>
+                                        <span class=allergen>
+                                            11. Sesame
+                                        </span>
+                                        <span class=allergen>
+                                            12. Sulphites
+                                        </span>
+                                    </div>
+                                    <div class="pure-u-1-2 pure-u-md-1-4">
+                                        <span class=allergen>
+                                            13. Lupin
+                                        </span>
+                                        <span class=allergen>
+                                            14. Molluscs
+                                        </span>
+                                        <span class=allergen>
+                                        </span>
+                                        <span class=allergen>
+                                        </span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="pure-g">
+                        <div class="pure-u-1">
+                            <div class="box-m4 pure-left">
+                                <a href="#" class="standardlink" title="download menu">Download Menu</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <footer class="menu-page">
+            <div class="box-x10">
+                <div class="pure-g">
+                    <div class="pure-u-1 pure-u-md-1-2 pure-left">
+                        <div class="centre-mob">
+                            <div class="box-x2 box-2">
+                                Terms / Privacy Policy / Data Access Request
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-2 pure-right">
+                        <div class="centre-mob">
+                            <div class="box-x2 box-2">
+                                <img src="img/svg/Facebook.svg" alt="Facbook" class="pure-img">
+                                <img src="img/svg/Twitter.svg" alt="Twitter" class="pure-img">
+                                <img src="img/svg/Instagram.svg" alt="Instagram" class="pure-img">
+                                <img src="img/svg/Youtube.svg" alt="Youtube" class="pure-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        //using document ready...
+        $(document).ready(function () {
+            $(".nav-click").on("click", function () {
+                $("#navcheck").trigger("click");
+            });
+        });
+    </script>
+</body>
+
+</html>
