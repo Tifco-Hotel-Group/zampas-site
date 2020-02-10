@@ -171,21 +171,25 @@ h5 {
 p {
 	font-size: 1em;
 }
+
 a {
 	color: map-get($colors, primary);
 	font-size: 1.1em;
 }
+
 strong {
 	font-weight: 600;
 }
 
-.hide {	
+.hide {
 	@media(max-width: 40em) {
 		display: none;
 	}
 }
-.only-mob  {
+
+.only-mob {
 	display: block;
+
 	@media(min-width: 40em) {
 		display: none;
 	}
@@ -208,6 +212,10 @@ strong {
 	padding: 2.4em
 }
 
+.box-5 {
+	padding: 3em
+}
+
 
 .box-m1 {
 	margin: 1em
@@ -220,18 +228,23 @@ strong {
 .box-m3 {
 	margin: 3em;
 }
+
 .box-m4 {
-	margin:2em 0;
+	margin: 2em 0;
+
 	@media(min-width: 40em) {
 		margin: 4em;
 	}
 }
+
 .box-m5 {
-	margin:2.4em 0;
+	margin: 2.4em 0;
+
 	@media(min-width: 40em) {
 		margin: 5em;
-	}	
+	}
 }
+
 .box-x1,
 .box-x2,
 .box-x3,
@@ -351,6 +364,7 @@ strong {
 
 .centre-mob {
 	text-align: center;
+
 	@media(min-width: 40em) {
 		text-align: inherit
 	}
@@ -412,6 +426,8 @@ header {
 		right: 0;
 		margin: .7em .7em 0 0;
 		top: 0;
+		color: white;
+		text-decoration: none;
 
 		@media(min-width: 40em) {
 			margin: 1.4em 1.7em 0 0;
@@ -1016,6 +1032,7 @@ Section 2
 			font-size: 2em;
 			padding: .2em 1em;
 		}
+
 		&:hover {
 			text-decoration: underline;
 		}
@@ -1023,6 +1040,7 @@ Section 2
 		&.active {
 			text-decoration: underline;
 		}
+
 		a {
 			text-decoration: none;
 		}
@@ -1034,112 +1052,114 @@ Section 2
 }
 
 .select-box {
-  position: relative;
-  display: block;
-  width: 94%;
-  margin: 0 auto;
-  font-size: 1.5em;
-  color: map-get($colors, primary);
-  @media(min-width: 40em) {
-	display:none
-}
+	position: relative;
+	display: block;
+	width: 94%;
+	margin: 0 auto;
+	font-size: 1.5em;
+	color: map-get($colors, primary);
 
-  &__current {
-    position: relative;
-    box-shadow: 0 15px 30px -10px transparentize(#000, 0.9);
-    cursor: pointer;
-    outline: none;
-    
-    &:focus {
-      & + .select-box__list {
-        opacity: 1;
+	@media(min-width: 40em) {
+		display: none
+	}
 
-        // We have to set "animation-name: none;" to make the list visible (read below how it works)
+	&__current {
+		position: relative;
+		box-shadow: 0 15px 30px -10px transparentize(#000, 0.9);
+		cursor: pointer;
+		outline: none;
 
-        animation-name: none;
-        
-        .select-box__option {
-          cursor: pointer;
-        }
-      }
-      
-      .select-box__icon {
-        transform: translateY(-50%) rotate(180deg);
-      }
-    }
-  }
-  
-  &__icon {
-    position: absolute;
-    top: 50%;
-    right: 15px;
-    transform: translateY(-50%);
-    width: 20px;
-    opacity: 1;
-    transition: 0.2s ease;
-  }
-  
-  &__value {
-    display: flex;
-  }
-  
-  &__input {
-    display: none;
-    
-    &:checked + .select-box__input-text {
-      display: block;
-    }
-  }
-  
-  &__input-text {
-    display: none;
-    width: 100%;
-    margin: 0;
-	padding: 15px;
-	border: 1px solid map-get($colors, primary);
-  }
-  
-  &__list {
-    position: absolute;
-    width: 100%;
-    padding: 0;
-    list-style: none;
-    opacity: 0;
-    
-    // We need to use animation with delay.
-    // Otherwise the click event will not have time to run on label, because this element disapears immediately when .select-box__current element loses the focus.
-    // This delay will not be noticed because we set "opacity" to "0".
-    // We also use "animation-fill-mode: forwards" to make the list stay hidden.
-    
-    animation-name: HideList;
-    animation-duration: 0.5s;
-    animation-delay: 0.5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: step-start;
-    box-shadow: 0 15px 30px -10px transparentize(#000, 0.9);
-  }
-  
-  &__option {
-    display: block;
-	padding: 15px;
-	background-color: black;
-	border: 1px solid map-get($colors, primary);
-    
-    &:hover,
-    &:focus {
-      color:map-get($colors, accent );
-	  border: 1px solid map-get($colors, accent);
-    }
-  }
+		&:focus {
+			&+.select-box__list {
+				opacity: 1;
+
+				// We have to set "animation-name: none;" to make the list visible (read below how it works)
+
+				animation-name: none;
+
+				.select-box__option {
+					cursor: pointer;
+				}
+			}
+
+			.select-box__icon {
+				transform: translateY(-50%) rotate(180deg);
+			}
+		}
+	}
+
+	&__icon {
+		position: absolute;
+		top: 50%;
+		right: 15px;
+		transform: translateY(-50%);
+		width: 20px;
+		opacity: 1;
+		transition: 0.2s ease;
+	}
+
+	&__value {
+		display: flex;
+	}
+
+	&__input {
+		display: none;
+
+		&:checked+.select-box__input-text {
+			display: block;
+		}
+	}
+
+	&__input-text {
+		display: none;
+		width: 100%;
+		margin: 0;
+		padding: 15px;
+		border: 1px solid map-get($colors, primary);
+	}
+
+	&__list {
+		position: absolute;
+		width: 100%;
+		padding: 0;
+		list-style: none;
+		opacity: 0;
+
+		// We need to use animation with delay.
+		// Otherwise the click event will not have time to run on label, because this element disapears immediately when .select-box__current element loses the focus.
+		// This delay will not be noticed because we set "opacity" to "0".
+		// We also use "animation-fill-mode: forwards" to make the list stay hidden.
+
+		animation-name: HideList;
+		animation-duration: 0.5s;
+		animation-delay: 0.5s;
+		animation-fill-mode: forwards;
+		animation-timing-function: step-start;
+		box-shadow: 0 15px 30px -10px transparentize(#000, 0.9);
+	}
+
+	&__option {
+		display: block;
+		padding: 15px;
+		background-color: black;
+		border: 1px solid map-get($colors, primary);
+
+		&:hover,
+		&:focus {
+			color: map-get($colors, accent);
+			border: 1px solid map-get($colors, accent);
+		}
+	}
 }
 
 @keyframes HideList {
-  from {
-    transform: scaleY(1);
-  }
-  to {
-    transform: scaleY(0);
-  }
+	from {
+		transform: scaleY(1);
+	}
+
+	to {
+		transform: scaleY(0);
+	}
 }
 
 #section1 {
@@ -1151,33 +1171,40 @@ Section 2
 						.foliage {
 							background-position: #{(-220 * $i)}px;
 						}
+						h3 {
+							background-position: #{(-220 * $i)}px;
+						}
 					}
 				}
 			}
+
 			a {
 				text-decoration: none;
 			}
 		}
+
 		.menu-title {
 			transition: all 0.3s linear;
 			cursor: pointer;
 
-			.foliage {				
+			.foliage {
 				background: white;
 				background-image: url(../img/BG-images/zampas-bg-menu.jpg);
 				width: auto;
 				display: none;
-				background-size: 400%;				
+				background-size: 400%;
 				border: 2px solid map-get($colors, primary);
 				box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 				transition: box-shadow 0.3s ease-in-out;
 				margin-top: 30%;
+
 				img {
-					padding:4em 0;
+					padding: 4em 0;
 					filter: grayscale(60%);
 				}
+
 				@media(min-width: 40em) {
-					display:block;
+					display: block;
 				}
 			}
 
@@ -1187,35 +1214,40 @@ Section 2
 				color: map-get($colors, primary);
 				display: block;
 				width: inherit;
+				background-image: url(../img/BG-images/zampas-bg-menu.jpg);
+				text-shadow: none;
+
 				@media(min-width: 40em) {
 					padding: 1em;
-					border: none;					
+					border: none;
 				}
+
 				&:after {
 					@media(min-width: 40em) {
 						content: "";
-					position: absolute;
-					bottom: 1em;
-					width: 60%;
-					height: 2px;
-					left:20%;
-					margin: 0;
-					transition: $animate;
-					transition-duration: 0.3s;
-					opacity: 0;
-					background-color: map-get($colors, primary);
+						position: absolute;
+						bottom: 1em;
+						width: 60%;
+						height: 2px;
+						left: 20%;
+						margin: 0;
+						transition: $animate;
+						transition-duration: 0.3s;
+						opacity: 0;
+						background-color: map-get($colors, primary);
 					}
-					
-				}				
+
+				}
 			}
+
 			a {
 				text-decoration: none;
 			}
 
 			&:hover {
 				@media(min-width: 40em) {
-				transform: translatey(-1em);
-				transition: all 0.3s linear;
+					transform: translatey(-1em);
+					transition: all 0.3s linear;
 				}
 
 				h3 {
@@ -1225,12 +1257,13 @@ Section 2
 				}
 
 				.foliage {
-					
+
 					border: 2px solid map-get($colors, primary);
 					box-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+
 					img {
 						filter: grayscale(0%);
-						filter: drop-shadow(2px 4px 4px rgba(0,0,0,0.2));
+						filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.2));
 					}
 				}
 			}
@@ -1271,23 +1304,27 @@ Section 2
 .menucontainer {
 	text-align: center;
 	transition: max-height .3s linear;
-	color: map-get($colors, accent);			
-	
+	color: map-get($colors, accent);
+
 	.menu-border {
-		border: 2px solid map-get($colors, primary );
+		border: 2px solid map-get($colors, primary);
 		margin: 2.5em 0 2.5em 0;
+
 		@media(min-width: 40em) {
 			margin: 4em 2em 4em 2em;
-		}		
-	}	
+		}
+	}
+
 	.allergen-border {
-		border: 2px solid map-get($colors, primary );		
+		border: 2px solid map-get($colors, primary);
 		margin: 0;
+
 		@media(min-width: 40em) {
 			margin: 0 2em 1em 2em;
 		}
 
 	}
+
 	.menuheading {
 		text-transform: uppercase;
 		font-size: 1.8em;
@@ -1312,7 +1349,9 @@ Section 2
 			font-size: 1.2em;
 		}
 	}
-	h3, h4 {
+
+	h3,
+	h4 {
 		text-transform: uppercase;
 	}
 
@@ -1330,10 +1369,10 @@ Section 2
 
 		@media(min-width: 40em) {
 			// font-size: 1.5em;
-			background-size: 400px 100px;		
-			margin-top: -87px;	
+			background-size: 400px 100px;
+			margin-top: -87px;
 		}
-		
+
 		// &:after {
 		// 	content: " ";
 		// 	background-color: black;
@@ -1353,6 +1392,7 @@ Section 2
 		display: block;
 		font-size: 1.2em;
 		margin: .5em 0;
+
 		@media(min-width: 40em) {
 			font-size: 1.4em;
 		}
@@ -1363,6 +1403,7 @@ Section 2
 		font-size: 1em;
 		margin: .3em .1em;
 		font-weight: 400;
+
 		@media(min-width: 40em) {
 			font-size: 1.1em;
 			margin: .3em 10%;
@@ -1375,15 +1416,17 @@ Section 2
 		margin: .3em 0;
 		font-weight: 200;
 	}
+
 	.foodprice {
 		display: block;
 		font-size: 1.2em;
 		font-weight: 400;
 		margin: .3em 0;
 	}
+
 	.signature-dish {
-		border: 2px solid map-get($colors, primary );
-		width:70%;
+		border: 2px solid map-get($colors, primary);
+		width: 70%;
 		margin: 2em auto;
 	}
 
@@ -1427,7 +1470,7 @@ Section 2
 	text-transform: uppercase;
 	font-size: 1.5em;
 	text-decoration: underline;
-	padding:1em 1em 1em 0;	
+	padding: 1em 1em 1em 0;
 
 	&::after {
 		background-image: url('../img/svg/right-arrow.svg');
@@ -1980,9 +2023,11 @@ figure {
 		padding: .5em 0;
 		display: block;
 	}
+
 	img {
 		position: absolute;
 		max-width: 70px;
+
 		@media(min-width: 40em) {
 			max-width: 180px;
 		}
@@ -2156,37 +2201,137 @@ figure {
 
 #section7 {
 	background-image: url('../img/zampas-banner2.jpg');
+
 	.footer {
 		h3 {
+			margin:.5em 0;
+		}
+		h5 {
+			margin: .4em 0;
 		}
 
 		p {
-			line-height: 1em;
-			font-size: 1.4em;
+			line-height: 1.1em;
+			font-size: 1.1em;
 			padding: 0;
-			margin: .8em 0;
+			margin: .4em 0;
+			@media(min-width: 40em) {
+				font-size: 1.4em;
+				padding: 0;
+				margin: .6em 0;
+			}
 		}
 
 		a {
 			color: map-get($colors, accent);
 			line-height: 1.8em;
 		}
+	
 	}
 
 	#map {
 		min-width: 100px;
-		height: 500px;
+		height: 250px;
+		@media(min-width: 40em) {
+			min-width: 100px;
+			height: 500px;
+		}
 	}
-	iframe {
-		width: 100%;
-		margin: 2em auto;
 
+	.opentable {
+		padding: 1em;
+		text-align: left;
+		@media(min-width: 40em) {
+			padding: 4em 18%;
+		}
+
+		h3 {
+			color: map-get($colors, accentnavy);
+			text-shadow: none;
+			font-size: 3em;
+			text-align: left;
+			font-weight: 400;
+			padding: .5em 0;
+		}
+
+		.booking-text {
+			font-size: 1.5em;
+			color: grey;
+			padding: .5em 0;
+		}
+
+		.ot-dtp-picker.wide {
+			width: 100%;
+			padding: 0;
+
+			.ot-dtp-picker-form {
+				border: none;
+				height: auto;
+				display: flex;
+				flex-flow: row wrap;
+
+				.ot-dtp-picker-selector {
+					margin: 1em 0;
+					height: 62px;
+					width: 250px;
+					float: none;
+					// display: inline-block;
+
+					.ot-dtp-picker-selector-link {
+						padding: 20px 20px 20px 42px;
+						border: 1px solid #ccc;
+						border-radius: 4px;
+
+						&::before {
+							font-size: 20px;
+							color: grey;
+							top: 20px;
+						}
+
+						&::after {
+							font-size: 10px;
+							color: grey;
+						}					
+				}
+
+				&:nth-of-type(2) {
+					margin-left: 1.5em;
+					border-left: none;
+				}
+				&:nth-of-type(3) {
+					border-left: none;
+					margin: 0 25% auto;
+					float: none;
+				}
+			}
+			.ot-dtp-picker-button {
+				float: none;
+				margin: 1em auto !important;
+				display: block;
+				border-radius: 2em;
+				background: #003c56;
+				padding: .9em 1.5em;
+				text-transform: uppercase;
+				font-weight: 400;
+				font-size: 1.4em;
+				border-color: #003c56;
+				height: auto;
+				width: auto;
+				box-shadow: 0 0 0 1px white;
+			}
+		}
+		.ot-powered-by {
+			background-position: center;
+			margin-bottom: 0;
+			margin-top: 1em;
+		}
 	}
-	
+
+	.ot-title {
+		display: none;
+	}
 }
-.ot-dtp-picker {
-	min-width: 90%;
-	margin: 0 auto;
+
 }
 
 footer {
