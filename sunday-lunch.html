@@ -97,7 +97,7 @@
                     </ul>                
             </div>
         </div>
-            <div class="pure-g">
+            <div class="pure-g menumovemob">
                 <section class="pure-u-1 menucontainer box-x3">
                     <div class="pure-g">
                         <div class="pure-u-1">
@@ -287,7 +287,7 @@
                         </div>
                     </div>
                     <div class="pure-g">
-                        <div class="pure-u-1">
+                        <div class="pure-u-1" id="movedestination">
                             <article class="box-2 allergen-border">
                                 <h4 class=allergenheading>Allergens</h4>
                                 <div class="pure-g">
@@ -391,6 +391,10 @@
             $(".nav-click").on("click", function () {
                 $("#navcheck").trigger("click");
             });
+
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                $(".menumovemob").appendTo("#movedestination");
+            }           
         });
     </script>
 </body>

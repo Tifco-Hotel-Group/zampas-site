@@ -111,53 +111,53 @@
                     <h2>Delicious. Mouth-watering. Tasty.</h2>
                 </div>
             </div>
-            <section class="box-4">
+            <section class="box-2">
                 <div class="pure-g">
                     <div class="pure-u-1 pure-u-md-1-6">
-                        <div title="" class="menu-title box-2">
-                            <a href="/breakfast.html" class="foliage hide"><img src="img/menu-images/ocelot-border.png"
+                        <div title="" class="menu-title box-1">
+                            <a href="/breakfast.html" class="foliage hide"><img src="img/menu-images/ocelot.png"
                                     alt="Breakfast ocelot" class="pure-img" /></a><a href="/breakfast.html">
                                 <h3>Breakfast</h3>
                             </a>
                         </div>
                     </div>
                     <div class="pure-u-1 pure-u-md-1-6">
-                        <div title="" class="menu-title box-2">
+                        <div title="" class="menu-title box-1">
                             <a href="/brunch.html" class="foliage hide"><img
-                                    src="img/menu-images/spectacled-bear-border.png" alt="Breakfast ocelot"
+                                    src="img/menu-images/spectacled-bear.png" alt="Breakfast ocelot"
                                     class="pure-img" /></a><a href="/brunch.html">
                                 <h3>Brunch</h3>
                             </a>
                         </div>
                     </div>
                     <div class="pure-u-1 pure-u-md-1-6">
-                        <div title="" class="menu-title box-2">
-                            <a href="/lunch.html" class="foliage hide"><img src="img/menu-images/alpaca-border.png"
+                        <div title="" class="menu-title box-1">
+                            <a href="/lunch.html" class="foliage hide"><img src="img/menu-images/alpaca.png"
                                     alt="Breakfast ocelot" class="pure-img" /></a><a href="/lunch.html">
                                 <h3>Lunch</h3>
                             </a>
                         </div>
                     </div>
                     <div class="pure-u-1 pure-u-md-1-6">
-                        <div title="" class="menu-title box-2">
-                            <a href="/dinner.html" class="foliage hide"><img src="img/menu-images/anteater-border.png"
+                        <div title="" class="menu-title box-1">
+                            <a href="/dinner.html" class="foliage hide"><img src="img/menu-images/anteater.png"
                                     alt="Breakfast ocelot" class="pure-img" /></a><a href="/dinner.html">
                                 <h3>Dinner</h3>
                             </a>
                         </div>
                     </div>
                     <div class="pure-u-1 pure-u-md-1-6">
-                        <div title="" class="menu-title box-2">
+                        <div title="" class="menu-title box-1">
                             <a href="/sunday-lunch.html" class="foliage hide"><img
-                                    src="img/menu-images/sloth-border.png" alt="Breakfast ocelot"
+                                    src="img/menu-images/sloth.png" alt="Breakfast ocelot"
                                     class="pure-img" /></a><a href="/sunday-lunch.html">
                                 <h3>Sunday Lunch</h3>
                             </a>
                         </div>
                     </div>
                     <div class="pure-u-1 pure-u-md-1-6">
-                        <div title="" class="menu-title box-2">
-                            <a href="/wine-list.html" class="foliage hide"><img src="img/menu-images/viper-border.png"
+                        <div title="" class="menu-title box-1">
+                            <a href="/wine-list.html" class="foliage hide"><img src="img/menu-images/viper.png"
                                     alt="Breakfast ocelot" class="pure-img" /></a><a href="/wine-list.html">
                                 <h3>Wine List</h3>
                             </a>
@@ -271,9 +271,9 @@
                         <div class="pure-g">
                             <div class="pure-u-1">
                                 <div class="inside">
-                                    <span class="title">
+                                    <h2>
                                         Upcoming Music & Events
-                                    </span>
+                                    </h2>
                                 </div>
                             </div>
                         </div>
@@ -414,7 +414,7 @@
             </div>
         </div>
         <div class="section" id="section7">
-            <div class="box-x10">
+            <div class="box-x5">
                 <div class="pure-g mt-5">
                     <div class="pure-u-1-2 pure-u-md-1-2 pure-left">
                         <div class="footer">
@@ -440,17 +440,17 @@
                     </div>
                 </div>
             </div>
-            <div class="box-x10">
+            <div class="box-x5">
                 <div class="pure-g mt-3 pure-white">
                     <div class="pure-u-1">
                         <div class="pure-g">
-                            <div class="pure-u-1 pure-u-md-1-2">
+                            <div class="pure-u-1 pure-u-md-5-12">
                                 <div id="map"></div>
                             </div>
-                            <div class="pure-u-1 pure-u-md-1-2">
+                            <div class="pure-u-1 pure-u-md-7-12">
                                 <div class="opentable">
                                     <h3>Make a Booking</h3>
-                                    <span class="booking-text">Animi odio totam consectetur ducimus, possimus,
+                                    <span class="booking-text hide">Animi odio totam consectetur ducimus, possimus,
                                         accusamus, sapiente ex reprehenderit facilis vero.</span>
                                     <script type='text/javascript'
                                         src='//www.opentable.com/widget/reservation/loader?rid=412810&type=standard&theme=wide&iframe=false&domain=com&lang=en-US&newtab=true&ot_source=Restaurant%20website'>
@@ -502,8 +502,6 @@
                 css3: true,
                 scrollBar: true,  
                 scrollingSpeed: 700,
-                fitToSection: true,
-                touchSensitivity: 10,
                 //Design
                 lockAnchors: false,
                 anchors: ['ZampasDublin', 'Menus', 'About', 'ZampasBar', 'Events', 'ReviewsAndGallery',
@@ -511,6 +509,10 @@
                 ],
                 lazyLoading: true,
                 controlArrows: true,
+                afterResponsive: function(isResponsive){
+                    scrollBar: false
+                    
+                },
                 // navigationTooltips: ['Zampas Dublin', 'Menus', 'Our Bar', 'Reviews and Gallery', 'Opening Hours'],
                 afterRender: function () {
                     setInterval(function () {
