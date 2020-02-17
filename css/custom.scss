@@ -186,6 +186,11 @@ strong {
 		display: none;
 	}
 }
+.lg-hide {
+	@media(max-width: 80em) {
+		display: none;
+	}
+}
 
 .only-mob {
 	display: block;
@@ -384,7 +389,69 @@ strong {
 		text-align: inherit
 	}
 }
+.pure-img-height {
+	// width:auto;
+	// max-height: 100%;
+	// max-width: 100%;
+	// height: auto;
+	max-height: inherit;
+	display: block;
+	@media(min-width: 64em) {
+		max-width: 100%;
+		height: auto;
+		max-height: unset;
+	}
+}
 
+
+
+#returntotop {
+	position: fixed;
+	background-color: map-get($colors, accentnavy);
+	cursor: pointer;
+	border-radius: 50%;
+	bottom: 1em;
+	right: 1em;
+	width:3em;
+	height: 3em;
+	z-index: 100;
+	border: 1px solid map-get($colors, primary );
+	opacity:0;
+	transition: opacity .5s;
+	filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.3));
+	@media(min-width: 40em) {
+		width: 4em;
+		height: 4em;
+		bottom: 2em;
+		right: 2em;
+		border: 1px solid map-get($colors, accentnavy);		
+	}
+	&::before {
+		position: absolute;
+		top:.35em;
+		left:.5em;
+		background-color: map-get($colors, primary);
+		width:2em;
+		height: 2em;
+		content:' ';
+		cursor: pointer;
+		mask: url('../../img/svg/up-arrow.svg');
+		@media(min-width: 40em) {
+			top:.4em;
+		left:.6em;
+		width: 3em;
+		height: 3em;
+		}
+	}
+	&:hover, &:active, &:focus {
+		border: 1px solid map-get($colors, primary );
+		filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.7));
+	}
+	&.show {
+		opacity:1;
+	}
+
+}
 .fp-controlArrow {
 	&.fp-prev {
 		background-color: white;
@@ -393,9 +460,15 @@ strong {
 		mask: url('../../img/svg/left-arrow.svg');
 
 		@media(min-width: 40em) {
-			left: 20%;
+			left: 5%;
 			width: 8em;
 			height: 8em;
+		}
+		@media(min-width: 64em) {
+			left: 12%;			
+		}
+		@media(min-width: 80em) {
+			left: 18%;			
 		}
 
 		&:hover {
@@ -404,16 +477,21 @@ strong {
 	}
 
 	&.fp-next {
-
 		background-color: white;
 		transition: all .2s;
 		border: 0;
 		mask: url('../../img/svg/right-arrow.svg');
 
 		@media(min-width: 40em) {
-			right: 20%;
+			right: 5%;
 			width: 8em;
 			height: 8em;
+		}
+		@media(min-width: 64em) {
+			right: 12%;			
+		}
+		@media(min-width: 80em) {
+			right: 18%;			
 		}
 
 		&:hover {
@@ -929,12 +1007,16 @@ main {
 	z-index: 2;
 	-webkit-filter: drop-shadow(2px 2px 2px rgba(44, 42, 42, 0.6));
 	filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.6));
-
 	@media(min-width: 40em) {
-		margin-top: 10%;
-		width: 500px;
-		left: 50%;
-		margin-left: -250px;
+		margin-top: 15%;		
+	}	
+	// Ipad Portrait
+	@media only screen  and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
+		margin-top: 25%; 
+	}
+	// Ipad Pro Portrait
+	@media only screen  and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
+		margin-top: 30%; 
 	}
 }
 
@@ -1214,7 +1296,7 @@ Section 2
 				border: 2px solid map-get($colors, primary);
 				box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 				transition: box-shadow 0.3s ease-in-out;
-				margin-top: 30%;
+				margin-top: 0;
 
 				img {
 					padding: 4em 0;
@@ -1223,6 +1305,12 @@ Section 2
 
 				@media(min-width: 40em) {
 					display: block;
+				}
+				@media(min-width: 64em) {
+					margin-top: 15%;
+				}
+				@media(min-width: 74em) {
+					margin-top: 30%;
 				}
 			}
 			
@@ -1691,6 +1779,14 @@ figure {
 		@media(min-width: 40em) {
 			font-size: 1.8em;
 		}
+		// Ipad Portrait
+		@media only screen  and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
+			font-size: 2.5em;
+		}
+		// Ipad Pro Portrait
+		@media only screen  and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
+			font-size: 2.5em; 
+		}
 	}
 
 	.fig-text {
@@ -1698,6 +1794,14 @@ figure {
 
 		@media(min-width: 40em) {
 			font-size: 1.4em;
+		}
+		// Ipad Portrait
+		@media only screen  and (min-width: 768px) and (max-height: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
+			font-size: 1.9em;
+		}
+		// Ipad Pro Portrait
+		@media only screen  and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
+			font-size: 1.9em; 
 		}
 	}
 
@@ -1780,12 +1884,15 @@ figure {
 		max-width: 93vw;
 		max-height: 60vh;
 		overflow: hidden;
-
-		@media(min-width: 40em) {
+		@media(min-width: 64em) {
+			max-width: 95.5vw;
+			max-height: 60vh;
+			overflow: hidden;
+		}
+		@media(min-width: 80em) {
 			max-width: 1200px;
 			max-height: 41vh;
 			overflow: hidden;
-
 		}
 	}
 
@@ -1831,10 +1938,9 @@ figure {
 
 		.fig-header {
 			display: block;
-			margin: .2em auto;
+			margin: 2% auto;
 			text-transform: uppercase;
 			padding-bottom: .7em;
-			max-width: 220px;
 			-ms-transform: translate(0, 20px);
 			/* IE 9 */
 			-webkit-transform: translate(0, 20px);
@@ -1852,12 +1958,15 @@ figure {
 			}
 
 			@media(min-width: 40em) {
-				margin: 2em auto;
+				margin: 2% auto;
 				-ms-transform: translate(0, 50px);
 				/* IE 9 */
 				-webkit-transform: translate(0, 50px);
 				/* Safari prior 9.0 */
 				transform: translate(0, 50px);
+			}
+			@media(min-width: 100em) {
+			margin: 5% auto;
 			}
 		}
 
@@ -1891,10 +2000,18 @@ figure {
 
 #section3 {
 	.intro {
+		
 		@media(min-width: 40em) {
-			margin-top: 20%;
+			margin-top: 50%;
 		}
-
+		@media(min-width: 64em) {			
+			width: 500px;
+			left: 50%;
+			margin-left: -250px;
+		}	
+		@media(min-width: 80em) {	
+		margin-top: 20%;
+		}
 		h2 {
 			line-height: 1em;
 
@@ -2008,8 +2125,10 @@ figure {
 			width: 22px;
 			height: 50px;
 			top: 105%;
-
 			@media(min-width: 40em) {
+				top: 100%;
+			}
+			@media(min-width: 64em) {
 				top: 120%;
 			}
 
@@ -2117,16 +2236,23 @@ figure {
 	.newsletter {
 		margin: 0 auto;
 		background-attachment: fixed;
-		margin-top: 25%;
+		margin-top: 25%;		
 
-		@media(min-width: 40em) {
+		@media(min-width: 100em) {
 			max-width: 50vw;
 			margin-top: 8%;
 		}
 
 		.pure-form {
-			margin: 2em auto;
+			margin: 1em auto;
 			width: fit-content;
+			@media(min-width: 40em) {	
+				min-width: 80vw;
+			}
+			@media(min-width: 64em) {
+				margin: 2em auto;
+				min-width: auto;
+			}
 
 			.pure-div-rounded {
 				display: block;
@@ -2135,8 +2261,9 @@ figure {
 				margin: 0;
 				border: 2px solid white;
 				border-radius: 2em;
+				min-width: 80%;
 
-				@media(min-width: 40em) {
+				@media(min-width: 64em) {
 					border-radius: 3em;
 					min-width: 210px;
 					margin: 2em;
@@ -2158,7 +2285,7 @@ figure {
 					color: map-get($colors, primary);
 					text-align: center;
 
-					@media(min-width: 40em) {
+					@media(min-width: 64em) {
 						padding: .2em 0 .4em .5em;
 						min-width: 400px;
 						line-height: 2em;
@@ -2176,7 +2303,7 @@ figure {
 					width: 100%;
 					content: " ";
 
-					@media(min-width: 40em) {
+					@media(min-width: 64em) {
 						display: none;
 					}
 				}
@@ -2191,7 +2318,7 @@ figure {
 					min-width: 100%;
 					margin-top: .3em;
 
-					@media(min-width: 40em) {
+					@media(min-width: 64em) {
 						border-radius: 2em;
 						min-width: 200px;
 						line-height: 2em;
@@ -2205,7 +2332,7 @@ figure {
 				margin: 2em 0;
 				font-size: 1.1em;
 
-				@media(min-width: 40em) {
+				@media(min-width: 64em) {
 					font-size: 1.4em;
 				}
 			}
@@ -2224,19 +2351,13 @@ figure {
 				padding: 1em;
 				margin: 0 1em 0 .5em;
 
-				@media(min-width: 40em) {
-					/* Double-sized Checkboxes */
-					-ms-transform: scale(1.5);
-					/* IE */
-					-moz-transform: scale(1.5);
-					/* FF */
-					-webkit-transform: scale(1.5);
-					/* Safari and Chrome */
-					-o-transform: scale(1.5);
-					/* Opera */
-					transform: scale(1.5);
+				@media(min-width: 40em) {					
 					padding: 0;
-					margin: 0;
+					margin: 5% 1%;
+				}
+				@media(min-width: 64em) {					
+					padding: 0;
+					margin: 1% 1%;
 				}
 			}
 		}
@@ -2276,7 +2397,7 @@ figure {
 
 	#map {
 		display: none;
-		@media(min-width: 40em) {
+		@media(min-width: 64em) {
 			display: block;
 			min-width: 100px;
 			height: 520px;
@@ -2287,6 +2408,9 @@ figure {
 		padding: 1em;
 		text-align: left;
 		@media(min-width: 40em) {
+			padding: 2em 6%;
+		}
+		@media(min-width: 80em) {
 			padding: 4em 18%;
 		}
 
@@ -2330,7 +2454,7 @@ figure {
 					flex-basis: 49%;
 					max-width: 49%;
 					// display: inline-block;
-					@media(min-width: 40em) {
+					@media(min-width: 64em) {
 						height: 62px;
 						margin: 1em 0;
 						flex-basis: 48%;
@@ -2357,7 +2481,7 @@ figure {
 						padding: 14px 16px 14px 32px;
 						border: 1px solid #ccc;
 						border-radius: 2px;
-						@media(min-width: 40em) {
+						@media(min-width: 64em) {
 							padding: 20px 20px 20px 42px;
 							border-radius: 4px;
 						}
@@ -2368,7 +2492,7 @@ figure {
 							color: grey;
 							top: 14px;
 							left:10px;
-							@media(min-width: 40em) {
+							@media(min-width: 64em) {
 								font-size: 20px;
 								top: 20px;
 								left:12px;
@@ -2379,7 +2503,7 @@ figure {
 							font-size: 8px;
 							color: grey;
 							right:10px;
-							@media(min-width: 40em) {
+							@media(min-width:64em) {
 								font-size: 10px;
 								right:12px
 							}
@@ -2389,7 +2513,7 @@ figure {
 				&:nth-of-type(2) {	
 					margin-left: auto;			
 					border-left: none;
-					@media(min-width: 40em) {
+					@media(min-width: 64em) {
 						border-left: none;
 						margin-left: 1em;
 					}
@@ -2400,7 +2524,7 @@ figure {
 					float: none;
 					flex-basis: 100%;
 					max-width: 100%;
-					@media(min-width: 40em) {
+					@media(min-width: 64em) {
 						margin-top: 0;
 						flex-basis: 60%;
 						max-width: 60%;
@@ -2433,7 +2557,7 @@ figure {
 				height: auto;
 				width: auto;
 				box-shadow: 0 0 0 1px white;
-				@media(min-width: 40em) {
+				@media(min-width: 64em) {
 					flex-basis: 45%;
 					max-width: 45%;
 					margin: 1em auto !important;
