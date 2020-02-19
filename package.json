@@ -1,0 +1,25 @@
+{
+  "name": "zampas-site",
+  "version": "1.0.0",
+  "description": "zampas-site-template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tifco-Hotel-Group/zampas-site.git"
+  },
+  "keywords": [
+    "website"
+  ],
+  "author": "Tifco-Hotel-Group",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/Tifco-Hotel-Group/zampas-site/issues"
+  },
+  "homepage": "https://github.com/Tifco-Hotel-Group/zampas-site#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
