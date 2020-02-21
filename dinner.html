@@ -63,8 +63,7 @@
                     <div title="" class="menu-item"><a href="brunch.html" title="Brunch Menu">Brunch</a></div>
                     <div title="" class="menu-item"><a href="lunch.html" title="Lunch Menu">Lunch</a></div>
                     <div title="" class="menu-item active"><a href="dinner.html" title="Dinner Menu">Dinner</a></div>
-                    <div title="" class="menu-item"><a href="sunday-lunch.html" title="Sunday Lunch Menu">Sunday
-                            Lunch</a></div>
+                    <div title="" class="menu-item"><a href="sunday-lunch.html" title="Sunday Lunch Menu">Sunday Lunch</a></div>
                     <div title="" class="menu-item"><a href="wine-list.html" title="Wine List">Wine List</a></div>
                 </div>
                 <div class="pure-u-1 select-box">
@@ -101,8 +100,7 @@
                         <li><label class="select-box__option" for="1" aria-hidden="true">Brunch</label></li>
                         <li><label class="select-box__option" for="2" aria-hidden="true">Lunch</label></li>
                         <li><label class="select-box__option" for="3" aria-hidden="true">Dinner</label></li>
-                        <li><label class="select-box__option" for="4" aria-hidden="true">Sunday Lunch</label>
-                        </li>
+                        <li><label class="select-box__option" for="4" aria-hidden="true">Sunday Lunch</label></li>
                         <li><label class="select-box__option" for="5" aria-hidden="true">Wine List</label></li>
                     </ul>
                 </div>
@@ -609,8 +607,8 @@
         $(document).ready(function () {
             $(".nav-click").on("click", function () {
                 $("#navcheck").trigger("click");
-            });
-            if (window.screen.width <= 800) {
+            });            
+            if ($(window).width() < 800) {
                 $(".menumovemob").appendTo("#movedestination");
             }
         });
